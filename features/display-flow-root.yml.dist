@@ -13,5 +13,15 @@ status:
     firefox_android: "53"
     safari: "13"
     safari_ios: "13"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "58"
+      chrome_android: "58"
+      edge: "79"
+      firefox: "53"
+      firefox_android: "53"
+      safari: "13"
+      safari_ios: "13"
 compat_features:
   - css.properties.display.flow-root

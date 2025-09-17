@@ -13,6 +13,16 @@ status:
     firefox_android: "48"
     safari: "15.4"
     safari_ios: "15.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "48"
+      chrome_android: "48"
+      edge: "79"
+      firefox: "48"
+      firefox_android: "48"
+      safari: "15.4"
+      safari_ios: "15.4"
 compat_features:
   - css.properties.text-combine-upright
   - css.properties.text-combine-upright.all

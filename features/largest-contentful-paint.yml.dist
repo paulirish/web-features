@@ -9,6 +9,14 @@ status:
     edge: "79"
     firefox: "122"
     firefox_android: "122"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "77"
+      chrome_android: "77"
+      edge: "79"
+      firefox: "122"
+      firefox_android: "122"
 compat_features:
   - api.LargestContentfulPaint
   - api.LargestContentfulPaint.element

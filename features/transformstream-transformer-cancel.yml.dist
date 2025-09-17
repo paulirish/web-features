@@ -4,5 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support:
+      nodejs: 21.5.0
 compat_features:
   - api.TransformStream.TransformStream.transformer_cancel

@@ -9,6 +9,14 @@ status:
     edge: "79"
     safari: "7"
     safari_ios: "7"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "23"
+      chrome_android: "25"
+      edge: "79"
+      safari: "7"
+      safari_ios: "7"
 compat_features:
   - css.selectors.future
   - css.selectors.past

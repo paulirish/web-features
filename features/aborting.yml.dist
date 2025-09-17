@@ -13,6 +13,19 @@ status:
     firefox_android: "57"
     safari: "12.1"
     safari_ios: "12.2"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2021-05-11
+    baseline_high_date: 2023-11-11
+    support:
+      chrome: "66"
+      chrome_android: "66"
+      edge: "16"
+      firefox: "57"
+      firefox_android: "57"
+      safari: "12.1"
+      safari_ios: "12.2"
+      nodejs: 14.17.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-17
@@ -29,7 +42,6 @@ compat_features:
   - api.AbortSignal.abort_event
   - api.AbortSignal.aborted
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2019-03-25
   # baseline_high_date: 2021-09-25

@@ -7,6 +7,12 @@ status:
     chrome: "136"
     chrome_android: "136"
     edge: "136"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "136"
+      chrome_android: "136"
+      edge: "136"
 compat_features:
   - css.properties.dynamic-range-limit
   - css.properties.dynamic-range-limit.constrained

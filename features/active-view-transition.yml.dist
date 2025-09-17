@@ -9,6 +9,14 @@ status:
     edge: "125"
     safari: "18.2"
     safari_ios: "18.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "125"
+      chrome_android: "125"
+      edge: "125"
+      safari: "18.2"
+      safari_ios: "18.2"
 compat_features:
   # baseline: false
   # support:
@@ -19,7 +27,6 @@ compat_features:
   #   safari_ios: "18"
   - css.selectors.active-view-transition
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"

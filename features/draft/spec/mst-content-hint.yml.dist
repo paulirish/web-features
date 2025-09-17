@@ -9,6 +9,14 @@ status:
     edge: "83"
     safari: "12.1"
     safari_ios: "12.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "83"
+      chrome_android: "83"
+      edge: "83"
+      safari: "12.1"
+      safari_ios: "12.2"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-04-29

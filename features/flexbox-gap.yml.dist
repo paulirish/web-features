@@ -13,6 +13,16 @@ status:
     firefox_android: "63"
     safari: "14.1"
     safari_ios: "14.5"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "84"
+      chrome_android: "84"
+      edge: "84"
+      firefox: "63"
+      firefox_android: "63"
+      safari: "14.1"
+      safari_ios: "14.5"
 compat_features:
   - css.properties.column-gap.flex_context
   - css.properties.gap.flex_context

@@ -6,6 +6,11 @@ status:
   support:
     chrome: "88"
     edge: "88"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "88"
+      edge: "88"
 compat_features:
   # baseline: false
   # support:

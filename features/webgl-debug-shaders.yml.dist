@@ -13,6 +13,16 @@ status:
     firefox_android: "56"
     safari: "14"
     safari_ios: "14"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "47"
+      chrome_android: "47"
+      edge: "79"
+      firefox: "56"
+      firefox_android: "56"
+      safari: "14"
+      safari_ios: "14"
 compat_features:
   - api.WEBGL_debug_shaders
   - api.WEBGL_debug_shaders.getTranslatedShaderSource

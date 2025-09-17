@@ -13,6 +13,16 @@ status:
     firefox_android: "87"
     safari: "15"
     safari_ios: "15"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "85"
+      chrome_android: "85"
+      edge: "85"
+      firefox: "87"
+      firefox_android: "87"
+      safari: "15"
+      safari_ios: "15"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -114,7 +124,6 @@ compat_features:
   #   safari_ios: "14.5"
   - api.HTMLLinkElement.referrerPolicy
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20

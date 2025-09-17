@@ -6,5 +6,10 @@ status:
   support:
     firefox: "100"
     firefox_android: "100"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "100"
+      firefox_android: "100"
 compat_features:
   - css.at-rules.media.video-dynamic-range

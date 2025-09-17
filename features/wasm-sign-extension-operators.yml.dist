@@ -13,5 +13,15 @@ status:
     firefox_android: "62"
     safari: "14.1"
     safari_ios: "14.5"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "69"
+      chrome_android: "69"
+      edge: "18"
+      firefox: "62"
+      firefox_android: "62"
+      safari: "14.1"
+      safari_ios: "14.5"
 compat_features:
   - webassembly.sign-extension-operations

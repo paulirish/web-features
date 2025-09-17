@@ -6,6 +6,11 @@ status:
   support:
     chrome: "104"
     edge: "104"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "104"
+      edge: "104"
 compat_features:
   - api.BrowserCaptureMediaStreamTrack
   - api.BrowserCaptureMediaStreamTrack.clone

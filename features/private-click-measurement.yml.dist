@@ -6,6 +6,11 @@ status:
   support:
     safari: "15.4"
     safari_ios: "15.4"
+  baselinen:
+    baseline: false
+    support:
+      safari: "15.4"
+      safari_ios: "15.4"
 compat_features:
   # baseline: false
   # support:
@@ -13,7 +18,6 @@ compat_features:
   #   safari_ios: "14.5"
   - html.elements.a.attributionsourceid
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "15.4"

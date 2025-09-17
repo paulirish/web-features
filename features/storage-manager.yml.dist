@@ -12,6 +12,16 @@ status:
     firefox_android: "57"
     safari: "17"
     safari_ios: "17"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "61"
+      chrome_android: "61"
+      edge: "79"
+      firefox: "57"
+      firefox_android: "57"
+      safari: "17"
+      safari_ios: "17"
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-12-13
@@ -30,7 +40,6 @@ compat_features:
   - api.StorageManager.persisted
   - api.WorkerNavigator.storage
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-09-18
   # support:

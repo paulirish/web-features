@@ -13,6 +13,16 @@ status:
     firefox_android: "93"
     safari: "10"
     safari_ios: "10"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "41"
+      chrome_android: "41"
+      edge: "79"
+      firefox: "93"
+      firefox_android: "93"
+      safari: "10"
+      safari_ios: "10"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -28,7 +38,6 @@ compat_features:
   - css.properties.image-rendering
   - css.properties.image-rendering.auto
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-10-05
   # baseline_high_date: 2024-04-05

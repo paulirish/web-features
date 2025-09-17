@@ -7,5 +7,11 @@ status:
     chrome: "79"
     chrome_android: "79"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "79"
+      chrome_android: "79"
+      edge: "79"
 compat_features:
   - api.XRInputSource.gamepad

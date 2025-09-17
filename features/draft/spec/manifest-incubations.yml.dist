@@ -5,6 +5,10 @@ status:
   baseline: false
   support:
     edge: "138"
+  baselinen:
+    baseline: false
+    support:
+      edge: "138"
 compat_features:
   # baseline: false
   # support:

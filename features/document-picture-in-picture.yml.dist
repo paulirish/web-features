@@ -6,6 +6,11 @@ status:
   support:
     chrome: "130"
     edge: "130"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "130"
+      edge: "130"
 compat_features:
   # baseline: false
   # support:
@@ -26,7 +31,6 @@ compat_features:
   #   edge: "124"
   - api.DocumentPictureInPicture.requestWindow.option_disallowReturnToOpener
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "130"

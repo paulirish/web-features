@@ -9,5 +9,14 @@ status:
     edge: "87"
     safari: "16.4"
     safari_ios: "16.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "87"
+      chrome_android: "89"
+      edge: "87"
+      safari: "16.4"
+      safari_ios: "16.4"
+      nodejs: 16.0.0
 compat_features:
   - javascript.builtins.Atomics.waitAsync

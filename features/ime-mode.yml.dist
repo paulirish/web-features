@@ -6,5 +6,10 @@ status:
   support:
     firefox: "3"
     firefox_android: "4"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "3"
+      firefox_android: "4"
 compat_features:
   - css.properties.ime-mode

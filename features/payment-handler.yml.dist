@@ -7,6 +7,12 @@ status:
     chrome: "70"
     chrome_android: "70"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "70"
+      chrome_android: "70"
+      edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -15,7 +21,6 @@ compat_features:
   #   edge: "79"
   - api.Permissions.permission_payment-handler
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "70"

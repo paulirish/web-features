@@ -13,5 +13,15 @@ status:
     firefox_android: "28"
     safari: "9"
     safari_ios: "9"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "40"
+      chrome_android: "40"
+      edge: "80"
+      firefox: "58"
+      firefox_android: "28"
+      safari: "9"
+      safari_ios: "9"
 compat_features:
   - api.EXT_sRGB

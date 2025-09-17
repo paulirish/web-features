@@ -6,5 +6,10 @@ status:
   support:
     safari: "18.2"
     safari_ios: "18.2"
+  baselinen:
+    baseline: false
+    support:
+      safari: "18.2"
+      safari_ios: "18.2"
 compat_features:
   - css.properties.background-clip.border-area

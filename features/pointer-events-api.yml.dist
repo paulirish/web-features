@@ -13,6 +13,16 @@ status:
     firefox_android: "79"
     safari: "13"
     safari_ios: "13"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "55"
+      chrome_android: "55"
+      edge: "12"
+      firefox: "59"
+      firefox_android: "79"
+      safari: "13"
+      safari_ios: "13"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -27,7 +37,6 @@ compat_features:
   #   safari_ios: "13"
   - api.Navigator.maxTouchPoints
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28

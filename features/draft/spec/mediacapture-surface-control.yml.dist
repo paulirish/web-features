@@ -6,6 +6,11 @@ status:
   support:
     chrome: "136"
     edge: "136"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "136"
+      edge: "136"
 compat_features:
   - api.CaptureController.decreaseZoomLevel
   - api.CaptureController.forwardWheel

@@ -25,6 +25,7 @@ status:
       firefox_android: "52"
       safari: "10.1"
       safari_ios: "10.3"
+      nodejs: 7.6.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27

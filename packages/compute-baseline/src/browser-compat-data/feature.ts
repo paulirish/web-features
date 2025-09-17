@@ -79,12 +79,12 @@ export class Feature {
   rawSupportStatements(browser: Browser): SimpleSupportStatement[] {
     const support = this.data?.__compat?.support;
     if (support === undefined) {
-      throw new Error("This feature contains no __compat object.");
+      return [];
     }
 
     const statementOrStatements = support[browser.id];
     if (statementOrStatements === undefined) {
-      throw new Error(`${this} contains no support data for ${browser.name}`);
+      return [];
     }
 
     return Array.isArray(statementOrStatements)

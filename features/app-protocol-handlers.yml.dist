@@ -6,6 +6,11 @@ status:
   support:
     chrome: "96"
     edge: "96"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "96"
+      edge: "96"
 compat_features:
   - manifests.webapp.protocol_handlers
   - manifests.webapp.protocol_handlers.protocol

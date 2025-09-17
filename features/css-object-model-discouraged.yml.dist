@@ -6,6 +6,11 @@ status:
   support:
     safari: "10"
     safari_ios: "10"
+  baselinen:
+    baseline: false
+    support:
+      safari: "10"
+      safari_ios: "10"
 compat_features:
   # baseline: false
   # support:
@@ -40,7 +45,6 @@ compat_features:
   - api.CSSValue.cssText
   - api.CSSValue.cssValueType
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "10"

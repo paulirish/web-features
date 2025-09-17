@@ -8,5 +8,12 @@ status:
     edge: "12"
     firefox: "22"
     safari: "8"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "26"
+      edge: "12"
+      firefox: "22"
+      safari: "8"
 compat_features:
   - api.WEBGL_compressed_texture_s3tc

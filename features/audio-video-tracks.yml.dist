@@ -6,6 +6,11 @@ status:
   support:
     safari: "8"
     safari_ios: "8"
+  baselinen:
+    baseline: false
+    support:
+      safari: "8"
+      safari_ios: "8"
 compat_features:
   # baseline: false
   # support:
@@ -33,7 +38,6 @@ compat_features:
   - api.VideoTrackList.removetrack_event
   - api.VideoTrackList.selectedIndex
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "8"

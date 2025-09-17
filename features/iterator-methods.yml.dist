@@ -12,6 +12,18 @@ status:
     firefox_android: "131"
     safari: "18.4"
     safari_ios: "18.4"
+  baselinen:
+    baseline: low
+    baseline_low_date: 2025-03-31
+    support:
+      chrome: "122"
+      chrome_android: "122"
+      edge: "122"
+      firefox: "131"
+      firefox_android: "131"
+      safari: "18.4"
+      safari_ios: "18.4"
+      nodejs: 22.0.0
 compat_features:
   - javascript.builtins.Iterator.Iterator
   - javascript.builtins.Iterator.drop

@@ -9,6 +9,14 @@ status:
     edge: "79"
     firefox: "5"
     safari: "4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "4"
+      chrome_android: "18"
+      edge: "79"
+      firefox: "5"
+      safari: "4"
 compat_features:
   # baseline: false
   # support:
@@ -19,7 +27,6 @@ compat_features:
   #   safari: "3"
   - css.properties.resize
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "4"

@@ -13,5 +13,15 @@ status:
     firefox_android: "79"
     safari: "15.1"
     safari_ios: "15.1"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "75"
+      chrome_android: "75"
+      edge: "79"
+      firefox: "78"
+      firefox_android: "79"
+      safari: "15.1"
+      safari_ios: "15.1"
 compat_features:
   - webassembly.bulk-memory-operations

@@ -7,6 +7,12 @@ status:
     chrome: "84"
     chrome_android: "84"
     edge: "84"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "84"
+      chrome_android: "84"
+      edge: "84"
 compat_features:
   # baseline: false
   # support:
@@ -19,7 +25,6 @@ compat_features:
   - api.LayoutShift.toJSON
   - api.LayoutShift.value
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "84"

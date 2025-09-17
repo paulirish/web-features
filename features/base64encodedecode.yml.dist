@@ -13,6 +13,19 @@ status:
     firefox_android: "4"
     safari: "10"
     safari_ios: "10"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2021-04-20
+    baseline_high_date: 2023-10-20
+    support:
+      chrome: "30"
+      chrome_android: "30"
+      edge: "12"
+      firefox: "4"
+      firefox_android: "4"
+      safari: "10"
+      safari_ios: "10"
+      nodejs: 16.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -28,7 +41,6 @@ compat_features:
   - api.atob
   - api.btoa
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20

@@ -7,8 +7,13 @@ status:
     chrome: "93"
     chrome_android: "84"
     edge: "93"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "93"
+      chrome_android: "84"
+      edge: "93"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "93"

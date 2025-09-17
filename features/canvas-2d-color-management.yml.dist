@@ -9,5 +9,13 @@ status:
     edge: "92"
     safari: "15.2"
     safari_ios: "15.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "92"
+      chrome_android: "92"
+      edge: "92"
+      safari: "15.2"
+      safari_ios: "15.2"
 compat_features:
   - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter

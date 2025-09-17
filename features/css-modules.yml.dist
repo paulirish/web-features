@@ -7,5 +7,11 @@ status:
     chrome: "123"
     chrome_android: "123"
     edge: "123"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "123"
+      chrome_android: "123"
+      edge: "123"
 compat_features:
   - javascript.statements.import.import_attributes.type_css

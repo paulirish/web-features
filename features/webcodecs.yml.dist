@@ -8,6 +8,13 @@ status:
     chrome_android: "94"
     edge: "94"
     firefox: "130"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "94"
+      chrome_android: "94"
+      edge: "94"
+      firefox: "130"
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-09-03
@@ -140,7 +147,6 @@ compat_features:
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "94"

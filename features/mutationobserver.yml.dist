@@ -13,6 +13,16 @@ status:
     firefox_android: "14"
     safari: "7"
     safari_ios: "7"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "26"
+      chrome_android: "26"
+      edge: "12"
+      firefox: "14"
+      firefox_android: "14"
+      safari: "7"
+      safari_ios: "7"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -36,7 +46,6 @@ compat_features:
   - api.MutationRecord.target
   - api.MutationRecord.type
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

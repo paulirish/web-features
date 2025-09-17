@@ -6,6 +6,11 @@ status:
   support:
     safari: "18.4"
     safari_ios: "18.4"
+  baselinen:
+    baseline: false
+    support:
+      safari: "18.4"
+      safari_ios: "18.4"
 compat_features:
   # baseline: false
   # support:
@@ -20,7 +25,6 @@ compat_features:
   - css.properties.text-autospace.punctuation
   - css.properties.text-autospace.replace
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "18.4"

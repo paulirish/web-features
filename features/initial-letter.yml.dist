@@ -7,6 +7,12 @@ status:
     chrome: "110"
     chrome_android: "110"
     edge: "110"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "110"
+      chrome_android: "110"
+      edge: "110"
 compat_features:
   - css.properties.initial-letter
   - css.properties.initial-letter.normal

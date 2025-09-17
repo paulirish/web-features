@@ -13,6 +13,16 @@ status:
     firefox_android: "79"
     safari: "14"
     safari_ios: "14"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "84"
+      chrome_android: "84"
+      edge: "84"
+      firefox: "75"
+      firefox_android: "79"
+      safari: "14"
+      safari_ios: "14"
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-12-17
@@ -171,7 +181,6 @@ compat_features:
   - api.DocumentTimeline.DocumentTimeline
   - api.Element.getAnimations
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16

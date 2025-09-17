@@ -7,5 +7,11 @@ status:
     chrome: "91"
     chrome_android: "91"
     edge: "91"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "91"
+      chrome_android: "91"
+      edge: "91"
 compat_features:
   - http.headers.Critical-CH

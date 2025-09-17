@@ -9,6 +9,14 @@ status:
     edge: "124"
     firefox: "111"
     firefox_android: "111"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "124"
+      chrome_android: "124"
+      edge: "124"
+      firefox: "111"
+      firefox_android: "111"
 compat_features:
   # baseline: false
   # support:
@@ -20,7 +28,6 @@ compat_features:
   #   safari_ios: "3"
   - svg.elements.ellipse.fill.context-fill
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "124"

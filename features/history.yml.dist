@@ -13,6 +13,16 @@ status:
     firefox_android: "4"
     safari: "5"
     safari_ios: "4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "5"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "4"
+      firefox_android: "4"
+      safari: "5"
+      safari_ios: "4"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -46,7 +56,6 @@ compat_features:
   - api.PopStateEvent
   - api.PopStateEvent.state
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

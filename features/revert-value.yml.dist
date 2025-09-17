@@ -13,5 +13,15 @@ status:
     firefox_android: "67"
     safari: "9.1"
     safari_ios: "9.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "84"
+      chrome_android: "84"
+      edge: "84"
+      firefox: "67"
+      firefox_android: "67"
+      safari: "9.1"
+      safari_ios: "9.3"
 compat_features:
   - css.types.global_keywords.revert

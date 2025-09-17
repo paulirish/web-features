@@ -8,5 +8,12 @@ status:
     chrome_android: "83"
     edge: "93"
     safari: "14.1"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "93"
+      chrome_android: "83"
+      edge: "93"
+      safari: "14.1"
 compat_features:
   - api.EXT_texture_compression_rgtc

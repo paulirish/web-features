@@ -13,6 +13,16 @@ status:
     firefox_android: "4"
     safari: "1.2"
     safari_ios: "1"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "15"
+      firefox: "1.5"
+      firefox_android: "4"
+      safari: "1.2"
+      safari_ios: "1"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -39,7 +49,6 @@ compat_features:
   - css.properties.outline-style.solid
   - css.properties.outline-width
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-04-05
   # baseline_high_date: 2019-10-05

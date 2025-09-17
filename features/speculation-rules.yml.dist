@@ -7,6 +7,12 @@ status:
     chrome: "109"
     chrome_android: "109"
     edge: "109"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "109"
+      chrome_android: "109"
+      edge: "109"
 compat_features:
   # baseline: false
   # support:
@@ -23,7 +29,6 @@ compat_features:
   - api.Document.prerendering
   - api.Document.prerenderingchange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "109"

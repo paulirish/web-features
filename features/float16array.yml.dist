@@ -12,6 +12,16 @@ status:
     firefox_android: "129"
     safari: "18.2"
     safari_ios: "18.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "135"
+      chrome_android: "135"
+      edge: "135"
+      firefox: "129"
+      firefox_android: "129"
+      safari: "18.2"
+      safari_ios: "18.2"
 compat_features:
   - javascript.builtins.DataView.getFloat16
   - javascript.builtins.DataView.setFloat16

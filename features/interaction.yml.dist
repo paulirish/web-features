@@ -13,6 +13,16 @@ status:
     firefox_android: "64"
     safari: "9"
     safari_ios: "9"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "41"
+      chrome_android: "41"
+      edge: "12"
+      firefox: "64"
+      firefox_android: "64"
+      safari: "9"
+      safari_ios: "9"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-12-11
@@ -27,7 +37,6 @@ compat_features:
   #   safari_ios: "9"
   - css.at-rules.media.hover
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2018-12-11
   # baseline_high_date: 2021-06-11

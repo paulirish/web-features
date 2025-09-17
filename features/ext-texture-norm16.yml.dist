@@ -9,5 +9,13 @@ status:
     edge: "87"
     safari: "16"
     safari_ios: "16"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "87"
+      chrome_android: "87"
+      edge: "87"
+      safari: "16"
+      safari_ios: "16"
 compat_features:
   - api.EXT_texture_norm16

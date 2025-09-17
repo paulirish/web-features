@@ -6,6 +6,11 @@ status:
   support:
     chrome: "102"
     edge: "102"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "102"
+      edge: "102"
 compat_features:
   - api.LaunchParams.files
   - manifests.webapp.file_handlers

@@ -13,6 +13,16 @@ status:
     firefox_android: "46"
     safari: "16"
     safari_ios: "16"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "44"
+      chrome_android: "44"
+      edge: "79"
+      firefox: "46"
+      firefox_android: "46"
+      safari: "16"
+      safari_ios: "16"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-09-12
@@ -30,7 +40,6 @@ compat_features:
   - api.Permissions
   - api.Permissions.query
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-09-12
   # baseline_high_date: 2025-03-12

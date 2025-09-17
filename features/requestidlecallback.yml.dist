@@ -9,6 +9,14 @@ status:
     edge: "79"
     firefox: "55"
     firefox_android: "55"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "47"
+      chrome_android: "47"
+      edge: "79"
+      firefox: "55"
+      firefox_android: "55"
 compat_features:
   - api.IdleDeadline
   - api.IdleDeadline.didTimeout

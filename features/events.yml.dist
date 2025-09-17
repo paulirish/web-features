@@ -13,8 +13,20 @@ status:
     firefox_android: "4"
     safari: "1"
     safari_ios: "1"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2020-10-20
+    baseline_high_date: 2023-04-20
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "1"
+      firefox_android: "4"
+      safari: "1"
+      safari_ios: "1"
+      nodejs: 15.0.0
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

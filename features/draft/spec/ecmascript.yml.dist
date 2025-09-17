@@ -12,5 +12,17 @@ status:
     firefox_android: "138"
     safari: "15"
     safari_ios: "15"
+  baselinen:
+    baseline: low
+    baseline_low_date: 2025-04-29
+    support:
+      chrome: "91"
+      chrome_android: "91"
+      edge: "91"
+      firefox: "138"
+      firefox_android: "138"
+      safari: "15"
+      safari_ios: "15"
+      nodejs: 17.5.0
 compat_features:
   - javascript.operators.import.options_parameter

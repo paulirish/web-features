@@ -13,6 +13,19 @@ status:
     firefox_android: "55"
     safari: "11.1"
     safari_ios: "11.3"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2020-01-15
+    baseline_high_date: 2022-07-15
+    support:
+      chrome: "60"
+      chrome_android: "60"
+      edge: "79"
+      firefox: "55"
+      firefox_android: "55"
+      safari: "11.1"
+      safari_ios: "11.3"
+      nodejs: 8.3.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-10-14
@@ -41,7 +54,6 @@ compat_features:
   #   safari_ios: "8"
   - javascript.operators.spread.spread_in_function_calls
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15

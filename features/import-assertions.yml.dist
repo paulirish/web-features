@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   - javascript.statements.import.import_assertions
   - javascript.statements.import.import_assertions.type_css

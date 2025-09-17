@@ -13,6 +13,16 @@ status:
     firefox_android: "4"
     safari: "4"
     safari_ios: "5"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "3"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "3.5"
+      firefox_android: "4"
+      safari: "4"
+      safari_ios: "5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -40,7 +50,6 @@ compat_features:
   #   safari_ios: "1"
   - api.clearTimeout
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

@@ -17,17 +17,19 @@ export type SupportMap = Map<Browser, InitialSupport | undefined>;
 export function support(feature: Feature, browsers: Browser[]): SupportMap {
   const support: SupportMap = new Map();
   for (const b of browsers) {
+    try {
+      feature.rawSupportStatements(b);
+    } catch (e) {
+      support.set(b, undefined);
+      continue;
+    }
+
     let lastInitial: Release | undefined;
     let lastInitialBoundary: "" | "≤" = "";
     for (let index = b.current().releaseIndex; index >= 0; index--) {
       const release = b.releases[index];
       assert(release instanceof Release, `No index ${index} in ${b} releases`); // This shouldn't happen, but neither should off-by-one errors. 🫠
-      let supported = false;
-      try {
-        supported = feature.supportedIn(release);
-      } catch (e) {
-        // Ignore errors
-      }
+      const supported = feature.supportedIn(release);
 
       if (!lastInitial) {
         if ([false, null].includes(supported)) {

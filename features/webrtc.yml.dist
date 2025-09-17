@@ -13,6 +13,16 @@ status:
     firefox_android: "24"
     safari: "11"
     safari_ios: "11"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "56"
+      chrome_android: "56"
+      edge: "79"
+      firefox: "22"
+      firefox_android: "24"
+      safari: "11"
+      safari_ios: "11"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-09-19
@@ -267,7 +277,6 @@ compat_features:
   - api.RTCCertificate
   - api.RTCCertificate.expires
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15

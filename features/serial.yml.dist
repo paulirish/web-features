@@ -6,6 +6,11 @@ status:
   support:
     chrome: "89"
     edge: "89"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "89"
+      edge: "89"
 compat_features:
   # baseline: false
   # support:
@@ -15,7 +20,6 @@ compat_features:
   - html.elements.iframe.allow.serial
   - http.headers.Permissions-Policy.serial
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"

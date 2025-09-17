@@ -9,6 +9,14 @@ status:
     edge: "91"
     safari: "15"
     safari_ios: "15"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "91"
+      chrome_android: "91"
+      edge: "91"
+      safari: "15"
+      safari_ios: "15"
 compat_features:
   - api.ServiceWorker.ecmascript_modules
   - javascript.statements.import.service_worker_support

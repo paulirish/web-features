@@ -9,6 +9,14 @@ status:
     edge: "111"
     firefox: "115"
     firefox_android: "115"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "111"
+      chrome_android: "111"
+      edge: "111"
+      firefox: "115"
+      firefox_android: "115"
 compat_features:
   - css.properties.baseline-source
   - css.properties.baseline-source.auto

@@ -12,6 +12,16 @@ status:
     firefox_android: "127"
     safari: "16.2"
     safari_ios: "16.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "111"
+      chrome_android: "111"
+      edge: "111"
+      firefox: "127"
+      firefox_android: "127"
+      safari: "16.2"
+      safari_ios: "16.2"
 compat_features:
   - css.types.gradient.conic-gradient.hue_interpolation_method
   - css.types.gradient.conic-gradient.interpolation_color_space

@@ -13,6 +13,16 @@ status:
     firefox_android: "48"
     safari: "10.1"
     safari_ios: "10.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "44"
+      chrome_android: "44"
+      edge: "17"
+      firefox: "48"
+      firefox_android: "48"
+      safari: "10.1"
+      safari_ios: "10.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -27,7 +37,6 @@ compat_features:
   #   safari_ios: "10.3"
   - http.headers.Content-Security-Policy.upgrade-insecure-requests
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30

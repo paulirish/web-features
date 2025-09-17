@@ -7,5 +7,11 @@ status:
     chrome: "127"
     chrome_android: "127"
     edge: "127"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "127"
+      chrome_android: "127"
+      edge: "127"
 compat_features:
   - http.headers.No-Vary-Search

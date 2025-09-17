@@ -6,6 +6,11 @@ status:
   support:
     safari: "17"
     safari_ios: "17.1"
+  baselinen:
+    baseline: false
+    support:
+      safari: "17"
+      safari_ios: "17.1"
 compat_features:
   - api.ManagedMediaSource
   - api.ManagedMediaSource.ManagedMediaSource

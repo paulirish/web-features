@@ -5,6 +5,10 @@ status:
   baseline: false
   support:
     firefox: "120"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "120"
 compat_features:
   - api.Navigator.globalPrivacyControl
   - api.WorkerNavigator.globalPrivacyControl

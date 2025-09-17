@@ -9,8 +9,15 @@ status:
     edge: "79"
     safari: "13.1"
     safari_ios: "13.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "69"
+      chrome_android: "105"
+      edge: "79"
+      safari: "13.1"
+      safari_ios: "13.4"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "69"

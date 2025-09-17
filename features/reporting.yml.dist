@@ -9,6 +9,14 @@ status:
     edge: "96"
     safari: "16.4"
     safari_ios: "16.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "96"
+      chrome_android: "96"
+      edge: "96"
+      safari: "16.4"
+      safari_ios: "16.4"
 compat_features:
   # baseline: false
   # support:
@@ -23,7 +31,6 @@ compat_features:
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "96"

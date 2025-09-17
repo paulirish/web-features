@@ -6,6 +6,11 @@ status:
   support:
     safari: "11.1"
     safari_ios: "11.3"
+  baselinen:
+    baseline: false
+    support:
+      safari: "11.1"
+      safari_ios: "11.3"
 compat_features:
   - css.properties.speak-as
   - css.properties.speak-as.digits

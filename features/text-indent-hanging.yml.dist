@@ -8,5 +8,12 @@ status:
     firefox_android: "121"
     safari: "15"
     safari_ios: "15"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "121"
+      firefox_android: "121"
+      safari: "15"
+      safari_ios: "15"
 compat_features:
   - css.properties.text-indent.hanging

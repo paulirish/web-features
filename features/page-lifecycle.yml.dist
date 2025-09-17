@@ -7,6 +7,12 @@ status:
     chrome: "68"
     chrome_android: "68"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "68"
+      chrome_android: "68"
+      edge: "79"
 compat_features:
   - api.Document.freeze_event
   - api.Document.resume_event

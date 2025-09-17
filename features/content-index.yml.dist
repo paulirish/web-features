@@ -5,6 +5,10 @@ status:
   baseline: false
   support:
     chrome_android: "84"
+  baselinen:
+    baseline: false
+    support:
+      chrome_android: "84"
 compat_features:
   - api.ContentIndex
   - api.ContentIndex.add

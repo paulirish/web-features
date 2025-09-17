@@ -9,6 +9,14 @@ status:
     edge: "121"
     safari: "13.1"
     safari_ios: "13.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "121"
+      chrome_android: "56"
+      edge: "121"
+      safari: "13.1"
+      safari_ios: "13.4"
 compat_features:
   # baseline: false
   # support:
@@ -21,7 +29,6 @@ compat_features:
   - html.elements.audio.disableremoteplayback
   - html.elements.video.disableremoteplayback
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "121"

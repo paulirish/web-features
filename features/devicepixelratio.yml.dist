@@ -9,5 +9,13 @@ status:
     edge: "12"
     firefox: "18"
     firefox_android: "18"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "18"
+      firefox_android: "18"
 compat_features:
   - api.Window.devicePixelRatio

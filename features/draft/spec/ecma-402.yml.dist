@@ -6,6 +6,11 @@ status:
   support:
     firefox: "141"
     firefox_android: "141"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "141"
+      firefox_android: "141"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-03-14
@@ -25,7 +30,6 @@ compat_features:
   - javascript.builtins.Intl.supportedValuesOf.key_parameter_timeZone
   - javascript.builtins.Intl.supportedValuesOf.key_parameter_unit
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "141"

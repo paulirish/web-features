@@ -9,6 +9,15 @@ status:
     edge: "124"
     firefox: "110"
     firefox_android: "110"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "124"
+      chrome_android: "124"
+      edge: "124"
+      firefox: "110"
+      firefox_android: "110"
+      nodejs: 18.0.0
 compat_features:
   - api.ReadableStream.@@asyncIterator
   - api.ReadableStream.values

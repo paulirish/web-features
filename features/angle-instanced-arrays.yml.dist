@@ -13,6 +13,16 @@ status:
     firefox_android: "47"
     safari: "8"
     safari_ios: "8"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "32"
+      chrome_android: "30"
+      edge: "12"
+      firefox: "47"
+      firefox_android: "47"
+      safari: "8"
+      safari_ios: "8"
 compat_features:
   - api.ANGLE_instanced_arrays
   - api.ANGLE_instanced_arrays.drawArraysInstancedANGLE

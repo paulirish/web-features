@@ -13,6 +13,19 @@ status:
     firefox_android: "79"
     safari: "15.2"
     safari_ios: "15.2"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2021-12-13
+    baseline_high_date: 2024-06-13
+    support:
+      chrome: "68"
+      chrome_android: "89"
+      edge: "79"
+      firefox: "79"
+      firefox_android: "79"
+      safari: "15.2"
+      safari_ios: "15.2"
+      nodejs: 8.10.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-12-13
@@ -39,7 +52,6 @@ compat_features:
   - javascript.builtins.Atomics.wait
   - javascript.builtins.Atomics.xor
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-12-13
   # baseline_high_date: 2024-06-13

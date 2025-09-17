@@ -13,6 +13,16 @@ status:
     firefox_android: "80"
     safari: "15.4"
     safari_ios: "15.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "84"
+      chrome_android: "84"
+      edge: "84"
+      firefox: "80"
+      firefox_android: "80"
+      safari: "15.4"
+      safari_ios: "15.4"
 compat_features:
   - css.properties.appearance
   - css.properties.appearance.auto

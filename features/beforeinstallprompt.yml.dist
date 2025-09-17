@@ -7,6 +7,12 @@ status:
     chrome: "76"
     chrome_android: "76"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "76"
+      chrome_android: "76"
+      edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -32,7 +38,6 @@ compat_features:
   #   edge: "79"
   - api.Window.appinstalled_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "76"

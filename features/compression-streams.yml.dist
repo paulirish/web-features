@@ -12,8 +12,19 @@ status:
     firefox_android: "113"
     safari: "16.4"
     safari_ios: "16.4"
+  baselinen:
+    baseline: low
+    baseline_low_date: 2023-05-09
+    support:
+      chrome: "80"
+      chrome_android: "80"
+      edge: "80"
+      firefox: "113"
+      firefox_android: "113"
+      safari: "16.4"
+      safari_ios: "16.4"
+      nodejs: 18.0.0
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-05-09
   # support:

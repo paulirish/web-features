@@ -9,6 +9,14 @@ status:
     edge: "114"
     firefox: "109"
     firefox_android: "109"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "114"
+      chrome_android: "114"
+      edge: "114"
+      firefox: "109"
+      firefox_android: "109"
 compat_features:
   - api.Document.scrollend_event
   - api.Element.scrollend_event

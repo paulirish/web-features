@@ -10,6 +10,15 @@ status:
     firefox: "64"
     firefox_android: "64"
     safari: "16.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "71"
+      chrome_android: "71"
+      edge: "79"
+      firefox: "64"
+      firefox_android: "64"
+      safari: "16.4"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-03-27
@@ -54,7 +63,6 @@ compat_features:
   - api.Document.fullscreenEnabled
   - css.selectors.fullscreen
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "71"

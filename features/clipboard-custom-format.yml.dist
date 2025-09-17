@@ -7,5 +7,11 @@ status:
     chrome: "104"
     chrome_android: "104"
     edge: "104"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "104"
+      chrome_android: "104"
+      edge: "104"
 compat_features:
   - api.ClipboardItem.type_web

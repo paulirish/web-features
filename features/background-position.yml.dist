@@ -13,6 +13,16 @@ status:
     firefox_android: "14"
     safari: "7"
     safari_ios: "7"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "25"
+      chrome_android: "25"
+      edge: "12"
+      firefox: "13"
+      firefox_android: "14"
+      safari: "7"
+      safari_ios: "7"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -40,7 +50,6 @@ compat_features:
   #   safari_ios: "1"
   - css.properties.background-position.multiple_backgrounds
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

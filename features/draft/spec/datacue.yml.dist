@@ -6,6 +6,11 @@ status:
   support:
     safari: "11"
     safari_ios: "11"
+  baselinen:
+    baseline: false
+    support:
+      safari: "11"
+      safari_ios: "11"
 compat_features:
   - api.DataCue
   - api.DataCue.DataCue

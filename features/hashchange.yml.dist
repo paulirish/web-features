@@ -13,6 +13,16 @@ status:
     firefox_android: "14"
     safari: "6"
     safari_ios: "6"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "16"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "11"
+      firefox_android: "14"
+      safari: "6"
+      safari_ios: "6"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -54,7 +64,6 @@ compat_features:
   - api.HashChangeEvent.newURL
   - api.HashChangeEvent.oldURL
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

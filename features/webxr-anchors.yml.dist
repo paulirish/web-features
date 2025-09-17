@@ -7,6 +7,12 @@ status:
     chrome: "85"
     chrome_android: "85"
     edge: "85"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "85"
+      chrome_android: "85"
+      edge: "85"
 compat_features:
   - api.XRAnchor
   - api.XRAnchor.anchorSpace

@@ -6,6 +6,11 @@ status:
   support:
     chrome: "111"
     edge: "111"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "111"
+      edge: "111"
 compat_features:
   # baseline: false
   # support:
@@ -60,7 +65,6 @@ compat_features:
   - api.ScreenDetails.screens
   - api.ScreenDetails.screenschange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "111"

@@ -9,5 +9,13 @@ status:
     edge: "121"
     firefox: "122"
     firefox_android: "122"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "121"
+      chrome_android: "121"
+      edge: "121"
+      firefox: "122"
+      firefox_android: "122"
 compat_features:
   - api.HTMLSelectElement.showPicker

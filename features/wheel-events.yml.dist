@@ -10,6 +10,15 @@ status:
     firefox: "17"
     firefox_android: "17"
     safari: "7"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "31"
+      chrome_android: "31"
+      edge: "12"
+      firefox: "17"
+      firefox_android: "17"
+      safari: "7"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -53,7 +62,6 @@ compat_features:
   - api.WheelEvent.deltaY
   - api.WheelEvent.deltaZ
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "31"

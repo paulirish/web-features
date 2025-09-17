@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -64,7 +67,6 @@ compat_features:
   - api.CredentialsContainer.get.identity_option.providers_multiple
   - api.IdentityCredential.configURL
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.IdentityCredentialError.error

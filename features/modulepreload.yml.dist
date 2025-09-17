@@ -12,5 +12,15 @@ status:
     firefox_android: "115"
     safari: "17"
     safari_ios: "17"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "66"
+      chrome_android: "66"
+      edge: "79"
+      firefox: "115"
+      firefox_android: "115"
+      safari: "17"
+      safari_ios: "17"
 compat_features:
   - html.elements.link.rel.modulepreload

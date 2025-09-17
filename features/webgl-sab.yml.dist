@@ -9,6 +9,14 @@ status:
     edge: "79"
     firefox: "79"
     firefox_android: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "60"
+      chrome_android: "60"
+      edge: "79"
+      firefox: "79"
+      firefox_android: "79"
 compat_features:
   - api.WebGL2RenderingContext.bufferData.srcData_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.bufferSubData.srcData_param_accepts_SharedArrayBuffer

@@ -7,5 +7,11 @@ status:
     chrome: "32"
     chrome_android: "32"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "32"
+      chrome_android: "32"
+      edge: "79"
 compat_features:
   - api.Navigator.vibrate

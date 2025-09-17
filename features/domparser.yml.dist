@@ -13,6 +13,16 @@ status:
     firefox_android: "14"
     safari: "9.1"
     safari_ios: "9.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "31"
+      chrome_android: "31"
+      edge: "12"
+      firefox: "12"
+      firefox_android: "14"
+      safari: "9.1"
+      safari_ios: "9.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -30,7 +40,6 @@ compat_features:
   - api.DOMParser.parseFromString
   - api.DOMParser.parseFromString.xml
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-03-21
   # baseline_high_date: 2018-09-21

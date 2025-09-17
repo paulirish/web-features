@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -726,7 +729,6 @@ compat_features:
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - webdriver.bidi.browser.setClientWindowState

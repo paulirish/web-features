@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -13,7 +16,6 @@ compat_features:
   - api.XRWebGLBinding
   - api.XRWebGLBinding.XRWebGLBinding
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.XRCompositionLayer

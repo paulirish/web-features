@@ -12,5 +12,15 @@ status:
     firefox_android: "131"
     safari: "18.2"
     safari_ios: "18.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "89"
+      chrome_android: "89"
+      edge: "89"
+      firefox: "131"
+      firefox_android: "131"
+      safari: "18.2"
+      safari_ios: "18.2"
 compat_features:
   - css.selectors.target-text

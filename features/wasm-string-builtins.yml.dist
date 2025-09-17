@@ -9,6 +9,14 @@ status:
     edge: "130"
     firefox: "134"
     firefox_android: "134"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "130"
+      chrome_android: "130"
+      edge: "130"
+      firefox: "134"
+      firefox_android: "134"
 compat_features:
   - webassembly.api.Module.Module.compile_options
   - webassembly.api.compileStreaming_static.compile_options

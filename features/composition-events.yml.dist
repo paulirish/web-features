@@ -13,6 +13,16 @@ status:
     firefox_android: "53"
     safari: "7"
     safari_ios: "7"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "26"
+      chrome_android: "26"
+      edge: "12"
+      firefox: "53"
+      firefox_android: "53"
+      safari: "7"
+      safari_ios: "7"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -43,7 +53,6 @@ compat_features:
   #   safari_ios: "5"
   - api.Element.compositionupdate_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-04-19
   # baseline_high_date: 2019-10-19

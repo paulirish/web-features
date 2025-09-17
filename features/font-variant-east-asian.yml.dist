@@ -13,6 +13,16 @@ status:
     firefox_android: "34"
     safari: "9.1"
     safari_ios: "9.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "63"
+      chrome_android: "63"
+      edge: "79"
+      firefox: "34"
+      firefox_android: "34"
+      safari: "9.1"
+      safari_ios: "9.3"
 compat_features:
   - css.properties.font-variant-east-asian
   - css.properties.font-variant-east-asian.full-width

@@ -5,6 +5,10 @@ status:
   baseline: false
   support:
     chrome_android: "100"
+  baselinen:
+    baseline: false
+    support:
+      chrome_android: "100"
 compat_features:
   # baseline: false
   # support:
@@ -36,7 +40,6 @@ compat_features:
   - api.NDEFRecord.secure_context_required
   - api.NDEFRecord.toRecords
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome_android: "100"

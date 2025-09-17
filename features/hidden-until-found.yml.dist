@@ -9,6 +9,14 @@ status:
     edge: "102"
     firefox: "139"
     firefox_android: "139"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "102"
+      chrome_android: "102"
+      edge: "102"
+      firefox: "139"
+      firefox_android: "139"
 compat_features:
   - api.Element.beforematch_event
   - html.global_attributes.hidden.until-found

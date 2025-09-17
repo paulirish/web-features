@@ -6,6 +6,11 @@ status:
   support:
     safari: "15"
     safari_ios: "15"
+  baselinen:
+    baseline: false
+    support:
+      safari: "15"
+      safari_ios: "15"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -20,7 +25,6 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.priority
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "15"

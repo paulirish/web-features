@@ -13,6 +13,16 @@ status:
     firefox_android: "65"
     safari: "11.1"
     safari_ios: "11.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "69"
+      chrome_android: "69"
+      edge: "79"
+      firefox: "65"
+      firefox_android: "65"
+      safari: "11.1"
+      safari_ios: "11.3"
 compat_features:
   - css.types.env
   - css.types.env.safe-area-inset-bottom

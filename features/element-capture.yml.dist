@@ -6,6 +6,11 @@ status:
   support:
     chrome: "132"
     edge: "132"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "132"
+      edge: "132"
 compat_features:
   - api.BrowserCaptureMediaStreamTrack.restrictTo
   - api.RestrictionTarget

@@ -13,5 +13,15 @@ status:
     firefox_android: "36"
     safari: "10"
     safari_ios: "10"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "32"
+      chrome_android: "32"
+      edge: "79"
+      firefox: "36"
+      firefox_android: "36"
+      safari: "10"
+      safari_ios: "10"
 compat_features:
   - css.properties.object-position

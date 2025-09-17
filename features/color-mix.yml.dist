@@ -12,5 +12,15 @@ status:
     firefox_android: "113"
     safari: "16.2"
     safari_ios: "16.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "111"
+      chrome_android: "111"
+      edge: "111"
+      firefox: "113"
+      firefox_android: "113"
+      safari: "16.2"
+      safari_ios: "16.2"
 compat_features:
   - css.types.color.color-mix

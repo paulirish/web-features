@@ -7,6 +7,12 @@ status:
     chrome: "94"
     chrome_android: "94"
     edge: "94"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "94"
+      chrome_android: "94"
+      edge: "94"
 compat_features:
   - api.HTMLElement.virtualKeyboardPolicy
   - api.Navigator.virtualKeyboard

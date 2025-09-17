@@ -6,6 +6,11 @@ status:
   support:
     chrome: "131"
     chrome_android: "131"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "131"
+      chrome_android: "131"
 compat_features:
   - api.XRFrame.fillJointRadii
   - api.XRFrame.fillPoses

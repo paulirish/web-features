@@ -13,6 +13,16 @@ status:
     firefox_android: "62"
     safari: "13.1"
     safari_ios: "13.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "79"
+      chrome_android: "79"
+      edge: "17"
+      firefox: "62"
+      firefox_android: "62"
+      safari: "13.1"
+      safari_ios: "13.4"
 compat_features:
   - css.properties.font-optical-sizing
   - css.properties.font-optical-sizing.auto

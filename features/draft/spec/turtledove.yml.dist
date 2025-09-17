@@ -7,6 +7,12 @@ status:
     chrome: "132"
     chrome_android: "132"
     edge: "132"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "132"
+      chrome_android: "132"
+      edge: "132"
 compat_features:
   # baseline: false
   # support:
@@ -38,7 +44,6 @@ compat_features:
   - api.Navigator.runAdAuction
   - api.Navigator.updateAdInterestGroups
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "132"

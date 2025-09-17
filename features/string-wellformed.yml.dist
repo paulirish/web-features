@@ -12,6 +12,18 @@ status:
     firefox_android: "119"
     safari: "16.4"
     safari_ios: "16.4"
+  baselinen:
+    baseline: low
+    baseline_low_date: 2023-10-24
+    support:
+      chrome: "111"
+      chrome_android: "111"
+      edge: "111"
+      firefox: "119"
+      firefox_android: "119"
+      safari: "16.4"
+      safari_ios: "16.4"
+      nodejs: 20.0.0
 compat_features:
   - javascript.builtins.String.isWellFormed
   - javascript.builtins.String.toWellFormed

@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -21,7 +24,6 @@ compat_features:
   - api.RTCPeerConnection.peerIdentity
   - api.RTCPeerConnection.setIdentityProvider
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.RTCIdentityAssertion

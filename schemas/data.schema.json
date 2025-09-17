@@ -202,6 +202,9 @@
                     },
                     "safari_ios": {
                       "type": "string"
+                    },
+                    "nodejs": {
+                      "type": "string"
                     }
                   },
                   "type": "object"

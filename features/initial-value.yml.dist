@@ -13,5 +13,15 @@ status:
     firefox_android: "19"
     safari: "1.2"
     safari_ios: "1"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "13"
+      firefox: "19"
+      firefox_android: "19"
+      safari: "1.2"
+      safari_ios: "1"
 compat_features:
   - css.types.global_keywords.initial

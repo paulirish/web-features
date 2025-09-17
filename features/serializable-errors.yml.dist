@@ -9,6 +9,14 @@ status:
     edge: "79"
     firefox: "103"
     firefox_android: "103"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "77"
+      chrome_android: "77"
+      edge: "79"
+      firefox: "103"
+      firefox_android: "103"
 compat_features:
   # baseline: false
   # support:
@@ -19,7 +27,6 @@ compat_features:
   #   firefox_android: "101"
   - api.DOMException.serializable_object
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "77"

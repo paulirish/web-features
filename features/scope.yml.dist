@@ -9,6 +9,14 @@ status:
     edge: "118"
     safari: "17.4"
     safari_ios: "17.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "118"
+      chrome_android: "118"
+      edge: "118"
+      safari: "17.4"
+      safari_ios: "17.4"
 compat_features:
   - api.CSSScopeRule
   - api.CSSScopeRule.end

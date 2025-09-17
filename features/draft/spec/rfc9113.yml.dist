@@ -13,5 +13,15 @@ status:
     firefox_android: "6"
     safari: "5"
     safari_ios: "4.2"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "5"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "6"
+      firefox_android: "6"
+      safari: "5"
+      safari_ios: "4.2"
 compat_features:
   - http.headers.Upgrade

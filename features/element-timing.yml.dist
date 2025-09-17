@@ -7,6 +7,12 @@ status:
     chrome: "77"
     chrome_android: "77"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "77"
+      chrome_android: "77"
+      edge: "79"
 compat_features:
   - api.Element.elementTiming
   - api.PerformanceElementTiming

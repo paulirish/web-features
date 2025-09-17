@@ -13,5 +13,15 @@ status:
     firefox_android: "85"
     safari: "15.4"
     safari_ios: "15.4"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "86"
+      chrome_android: "86"
+      edge: "86"
+      firefox: "85"
+      firefox_android: "85"
+      safari: "15.4"
+      safari_ios: "15.4"
 compat_features:
   - css.selectors.focus-visible

@@ -9,6 +9,14 @@ status:
     edge: "124"
     safari: "18"
     safari_ios: "18"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "124"
+      chrome_android: "124"
+      edge: "124"
+      safari: "18"
+      safari_ios: "18"
 compat_features:
   - api.HTMLElement.writingSuggestions
   - html.global_attributes.writingsuggestions

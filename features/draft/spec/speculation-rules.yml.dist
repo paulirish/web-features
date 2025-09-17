@@ -7,5 +7,11 @@ status:
     chrome: "121"
     chrome_android: "121"
     edge: "121"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "121"
+      chrome_android: "121"
+      edge: "121"
 compat_features:
   - api.Request.destination.speculationrules

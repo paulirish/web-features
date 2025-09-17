@@ -6,5 +6,10 @@ status:
   support:
     chrome_android: "101"
     edge: "134"
+  baselinen:
+    baseline: false
+    support:
+      chrome_android: "101"
+      edge: "134"
 compat_features:
   - api.Window.getDigitalGoodsService

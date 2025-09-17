@@ -13,5 +13,15 @@ status:
     firefox_android: "53"
     safari: "11.1"
     safari_ios: "11.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "57"
+      chrome_android: "57"
+      edge: "79"
+      firefox: "53"
+      firefox_android: "53"
+      safari: "11.1"
+      safari_ios: "11.3"
 compat_features:
   - css.properties.caret-color

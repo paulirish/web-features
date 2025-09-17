@@ -7,6 +7,12 @@ status:
     chrome: "133"
     chrome_android: "133"
     edge: "133"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "133"
+      chrome_android: "133"
+      edge: "133"
 compat_features:
   - css.properties.scroll-initial-target
   - css.properties.scroll-initial-target.nearest

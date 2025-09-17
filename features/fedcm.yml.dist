@@ -7,6 +7,12 @@ status:
     chrome: "116"
     chrome_android: "116"
     edge: "116"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "116"
+      chrome_android: "116"
+      edge: "116"
 compat_features:
   # baseline: false
   # support:
@@ -17,7 +23,6 @@ compat_features:
   - api.IdentityCredential
   - api.IdentityCredential.token
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "116"

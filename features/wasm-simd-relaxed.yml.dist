@@ -7,5 +7,11 @@ status:
     chrome: "114"
     chrome_android: "114"
     edge: "114"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "114"
+      chrome_android: "114"
+      edge: "114"
 compat_features:
   - webassembly.relaxed-SIMD

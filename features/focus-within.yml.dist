@@ -13,5 +13,15 @@ status:
     firefox_android: "52"
     safari: "10.1"
     safari_ios: "10.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "60"
+      chrome_android: "60"
+      edge: "79"
+      firefox: "52"
+      firefox_android: "52"
+      safari: "10.1"
+      safari_ios: "10.3"
 compat_features:
   - css.selectors.focus-within

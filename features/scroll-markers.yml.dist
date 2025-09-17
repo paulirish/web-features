@@ -6,6 +6,11 @@ status:
   support:
     chrome: "135"
     edge: "135"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "135"
+      edge: "135"
 compat_features:
   # baseline: false
   # support:
@@ -14,7 +19,6 @@ compat_features:
   #   edge: "135"
   - css.selectors.scroll-marker
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "135"

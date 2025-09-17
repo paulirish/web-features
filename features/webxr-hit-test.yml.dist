@@ -7,6 +7,12 @@ status:
     chrome: "81"
     chrome_android: "81"
     edge: "81"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "81"
+      chrome_android: "81"
+      edge: "81"
 compat_features:
   - api.XRFrame.getHitTestResults
   - api.XRFrame.getHitTestResultsForTransientInput

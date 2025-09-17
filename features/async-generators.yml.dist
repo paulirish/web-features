@@ -13,6 +13,19 @@ status:
     firefox_android: "55"
     safari: "12"
     safari_ios: "12"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2020-01-15
+    baseline_high_date: 2022-07-15
+    support:
+      chrome: "63"
+      chrome_android: "63"
+      edge: "79"
+      firefox: "55"
+      firefox_android: "55"
+      safari: "12"
+      safari_ios: "12"
+      nodejs: 10.0.0
 compat_features:
   - javascript.builtins.AsyncGenerator
   - javascript.builtins.AsyncGenerator.next

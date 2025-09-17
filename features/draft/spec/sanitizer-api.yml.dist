@@ -4,6 +4,9 @@
 status:
   baseline: false
   support: {}
+  baselinen:
+    baseline: false
+    support: {}
 compat_features:
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter

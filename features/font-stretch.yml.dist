@@ -11,6 +11,16 @@ status:
     firefox_android: "9"
     safari: "11"
     safari_ios: "11"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "60"
+      chrome_android: "60"
+      edge: "12"
+      firefox: "9"
+      firefox_android: "9"
+      safari: "11"
+      safari_ios: "11"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -25,7 +35,6 @@ compat_features:
   #   safari_ios: "11"
   - css.properties.font.font-width_keyword_values
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "60"

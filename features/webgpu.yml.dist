@@ -7,8 +7,13 @@ status:
     chrome: "113"
     chrome_android: "121"
     edge: "113"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "113"
+      chrome_android: "121"
+      edge: "113"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "113"

@@ -7,6 +7,12 @@ status:
     chrome: "128"
     chrome_android: "128"
     edge: "128"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "128"
+      chrome_android: "128"
+      edge: "128"
 compat_features:
   # baseline: false
   # support:
@@ -17,7 +23,6 @@ compat_features:
   - api.CredentialsContainer.create.publicKey_option.extensions.prf
   - api.CredentialsContainer.get.publicKey_option.extensions.prf
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"

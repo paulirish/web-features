@@ -6,5 +6,11 @@ status:
   support:
     firefox: "117"
     firefox_android: "117"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "117"
+      firefox_android: "117"
+      nodejs: 20.6.0
 compat_features:
   - api.ReadableStream.from_static

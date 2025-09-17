@@ -7,5 +7,11 @@ status:
     chrome: "62"
     chrome_android: "62"
     edge: "79"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "62"
+      chrome_android: "62"
+      edge: "79"
 compat_features:
   - api.HTMLMediaElement.captureStream

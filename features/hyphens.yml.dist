@@ -12,6 +12,16 @@ status:
     firefox_android: "43"
     safari: "17"
     safari_ios: "17"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "88"
+      chrome_android: "55"
+      edge: "88"
+      firefox: "43"
+      firefox_android: "43"
+      safari: "17"
+      safari_ios: "17"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-09-18
@@ -45,7 +55,6 @@ compat_features:
   - css.properties.hyphens.language_portuguese
   - css.properties.hyphens.language_spanish
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-09-18
   # support:

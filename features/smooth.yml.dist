@@ -6,5 +6,10 @@ status:
   support:
     firefox: "93"
     firefox_android: "93"
+  baselinen:
+    baseline: false
+    support:
+      firefox: "93"
+      firefox_android: "93"
 compat_features:
   - css.properties.image-rendering.smooth

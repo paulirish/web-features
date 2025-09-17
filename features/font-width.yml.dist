@@ -5,6 +5,10 @@ status:
   baseline: false
   support:
     safari: "18.4"
+  baselinen:
+    baseline: false
+    support:
+      safari: "18.4"
 compat_features:
   - css.properties.font-width
   - css.properties.font-width.condensed

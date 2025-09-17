@@ -13,6 +13,16 @@ status:
     firefox_android: "50"
     safari: "11.1"
     safari_ios: "11.3"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "66"
+      chrome_android: "66"
+      edge: "79"
+      firefox: "50"
+      firefox_android: "50"
+      safari: "11.1"
+      safari_ios: "11.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -28,7 +38,6 @@ compat_features:
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.ImageBitmapRenderingContext
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15

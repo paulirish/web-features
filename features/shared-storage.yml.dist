@@ -7,6 +7,12 @@ status:
     chrome: "126"
     chrome_android: "126"
     edge: "126"
+  baselinen:
+    baseline: false
+    support:
+      chrome: "126"
+      chrome_android: "126"
+      edge: "126"
 compat_features:
   - api.HTMLIFrameElement.sharedStorageWritable
   - api.HTMLImageElement.sharedStorageWritable

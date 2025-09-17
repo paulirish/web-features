@@ -13,6 +13,19 @@ status:
     firefox_android: "79"
     safari: "14"
     safari_ios: "14"
+  baselinen:
+    baseline: high
+    baseline_low_date: 2020-09-16
+    baseline_high_date: 2023-03-16
+    support:
+      chrome: "74"
+      chrome_android: "74"
+      edge: "79"
+      firefox: "75"
+      firefox_android: "79"
+      safari: "14"
+      safari_ios: "14"
+      nodejs: 12.0.0
 compat_features:
   - javascript.builtins.Intl.Locale
   - javascript.builtins.Intl.Locale.Locale

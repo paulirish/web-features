@@ -12,6 +12,18 @@ status:
     firefox_android: "138"
     safari: "17.2"
     safari_ios: "17.2"
+  baselinen:
+    baseline: low
+    baseline_low_date: 2025-04-29
+    support:
+      chrome: "123"
+      chrome_android: "123"
+      edge: "123"
+      firefox: "138"
+      firefox_android: "138"
+      safari: "17.2"
+      safari_ios: "17.2"
+      nodejs: 20.10.0
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-04-29
@@ -25,7 +37,6 @@ compat_features:
   #   safari_ios: "15"
   - javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2025-04-29
   # support:
