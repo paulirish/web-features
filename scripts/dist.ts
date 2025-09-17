@@ -1,6 +1,7 @@
 import { Temporal } from "@js-temporal/polyfill";
 import {
   computeBaseline,
+  coreBrowserSet,
   getStatus,
   parseRangedDateString,
   setLogger,
