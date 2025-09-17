@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { getCoreBrowserSet } from "./core-browser-set.js";
+import { browsers } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -98,7 +98,7 @@ export function computeBaseline(
     checkAncestors?: boolean;
   },
   compat: Compat = defaultCompat,
-  browserSet: Browser[] = getCoreBrowserSet(compat),
+  browserSet: Browser[] = browsers(compat),
 ): SupportDetails {
   // A cutoff date approximating "now" is needed to determine when a feature has
   // entered Baseline high. We use BCD's __meta.timestamp for this, but any

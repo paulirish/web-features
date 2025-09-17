@@ -69,6 +69,8 @@ interface Status {
 interface SupportStatus extends Status {
     /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
     by_compat_key?: Record<string, Status>
+    /** Baseline status including Node.js */
+    baselinen?: Status;
 }
 
 interface Discouraged {

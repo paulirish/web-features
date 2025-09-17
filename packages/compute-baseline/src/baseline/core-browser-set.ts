@@ -10,6 +10,6 @@ export const identifiers = [
   "safari_ios",
 ];
 
-export function getCoreBrowserSet(compat: Compat) {
+export function browsers(compat: Compat) {
   return identifiers.map((b) => compat.browser(b));
 }
