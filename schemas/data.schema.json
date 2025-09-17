@@ -179,7 +179,9 @@
                   "type": "string"
                 },
                 "support": {
-                  "additionalProperties": false,
+                  "additionalProperties": {
+                    "type": "string"
+                  },
                   "description": "Browser versions that most-recently introduced the feature",
                   "properties": {
                     "chrome": {
@@ -197,13 +199,13 @@
                     "firefox_android": {
                       "type": "string"
                     },
+                    "nodejs": {
+                      "type": "string"
+                    },
                     "safari": {
                       "type": "string"
                     },
                     "safari_ios": {
-                      "type": "string"
-                    },
-                    "nodejs": {
                       "type": "string"
                     }
                   },
