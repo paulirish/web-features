@@ -182,7 +182,7 @@ describe("computeBaseline", function () {
     browserSet.add(browser("nodejs"));
     const result = computeBaseline(
       {
-        compatKeys: ["javascript.operators.async_await"],
+        compatKeys: ["javascript.operators.async_function"],
         checkAncestors: false,
       },
       defaultCompat,

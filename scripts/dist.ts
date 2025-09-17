@@ -234,10 +234,13 @@ function toDist(sourcePath: string): YAML.Document {
   );
   console.log('baselinenBrowserSet', baselinenBrowserSet.map(b => b.id));
 
-  let computedStatus = computeBaseline({
-    compatKeys: computeFrom,
-    checkAncestors: true,
-  });
+  let computedStatus = computeBaseline(
+    {
+      compatKeys: computeFrom,
+      checkAncestors: true,
+    },
+    compat,
+  );
 
   let computedBaselinenStatus = computeBaseline(
     {
