@@ -98,7 +98,7 @@ export function computeBaseline(
     checkAncestors?: boolean;
   },
   compat: Compat = defaultCompat,
-  browserSet: Browser[] = browsers(compat),
+  browserSet?: Browser[],
 ): SupportDetails {
   // A cutoff date approximating "now" is needed to determine when a feature has
   // entered Baseline high. We use BCD's __meta.timestamp for this, but any
@@ -113,7 +113,9 @@ export function computeBaseline(
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
-  const statuses = keys.map((key) => calculate(key, compat, browserSet));
+  const statuses = keys.map((key) =>
+    calculate(key, compat, browserSet ?? getCoreBrowserSet(compat)),
+  );
   const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(

@@ -232,10 +232,6 @@ function toDist(sourcePath: string): YAML.Document {
   const baselinenBrowserSet = [...coreBrowserSet, "nodejs"].map((b) =>
     compat.browser(b),
   );
-  console.log(
-    "baselinenBrowserSet",
-    baselinenBrowserSet.map((b) => b.id),
-  );
 
   let computedStatus = computeBaseline(
     {
@@ -265,7 +261,6 @@ function toDist(sourcePath: string): YAML.Document {
 
   const finalStatus: any = JSON.parse(computedStatus.toJSON());
   finalStatus.baselinen = JSON.parse(computedBaselinenStatus.toJSON());
-  console.log("computedBaselinenStatus", finalStatus.baselinen);
 
   if (source.status) {
     if (isDeepStrictEqual(source.status, finalStatus)) {
