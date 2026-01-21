@@ -250,6 +250,12 @@ function toDist(sourcePath: string): YAML.Document {
     baselinenBrowserSet,
   );
 
+  // todo: check URL.parse
+  if (computedStatus.baseline !== computedBaselinenStatus.baseline && typeof computedBaselinenStatus.baseline === 'string') {
+    console.log(computedStatus.baseline ,  computedBaselinenStatus.baseline,  computedBaselinenStatus.toJSON())
+    debugger;
+  }
+
   const deprecatedKeysAllowed = source.draft_date || source.discouraged;
 
   if (computedStatus.discouraged && !deprecatedKeysAllowed) {
