@@ -13,19 +13,6 @@ status:
     firefox_android: "45"
     safari: "9"
     safari_ios: "9"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2016-04-26
-    baseline_high_date: 2018-10-26
-    support:
-      chrome: "42"
-      chrome_android: "42"
-      edge: "13"
-      firefox: "45"
-      firefox_android: "45"
-      safari: "9"
-      safari_ios: "9"
-      nodejs: 6.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2016-03-08
@@ -41,6 +28,7 @@ compat_features:
   - javascript.operators.class
   - javascript.operators.super
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-03-08
   # baseline_high_date: 2018-09-08

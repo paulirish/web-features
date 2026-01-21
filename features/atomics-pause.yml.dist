@@ -12,15 +12,5 @@ status:
     firefox_android: "137"
     safari: "18.4"
     safari_ios: "18.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "133"
-      chrome_android: "133"
-      edge: "133"
-      firefox: "137"
-      firefox_android: "137"
-      safari: "18.4"
-      safari_ios: "18.4"
 compat_features:
   - javascript.builtins.Atomics.pause

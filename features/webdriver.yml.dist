@@ -5,10 +5,6 @@ status:
   baseline: false
   support:
     firefox: "66"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "66"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-05-09

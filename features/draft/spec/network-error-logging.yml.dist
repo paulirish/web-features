@@ -7,11 +7,5 @@ status:
     chrome: "71"
     chrome_android: "71"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "71"
-      chrome_android: "71"
-      edge: "79"
 compat_features:
   - http.headers.NEL

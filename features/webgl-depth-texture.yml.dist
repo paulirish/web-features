@@ -13,15 +13,5 @@ status:
     firefox_android: "22"
     safari: "8"
     safari_ios: "8"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "26"
-      chrome_android: "26"
-      edge: "12"
-      firefox: "22"
-      firefox_android: "22"
-      safari: "8"
-      safari_ios: "8"
 compat_features:
   - api.WEBGL_depth_texture

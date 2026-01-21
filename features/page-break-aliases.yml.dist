@@ -7,12 +7,6 @@ status:
     chrome: "1"
     chrome_android: "18"
     edge: "12"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "1"
-      chrome_android: "18"
-      edge: "12"
 compat_features:
   # baseline: false
   # support:
@@ -47,6 +41,7 @@ compat_features:
   - css.properties.page-break-inside.auto
   - css.properties.page-break-inside.avoid
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "1"

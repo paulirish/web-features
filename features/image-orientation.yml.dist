@@ -13,16 +13,6 @@ status:
     firefox_android: "26"
     safari: "13.1"
     safari_ios: "13.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "81"
-      chrome_android: "81"
-      edge: "81"
-      firefox: "26"
-      firefox_android: "26"
-      safari: "13.1"
-      safari_ios: "13.4"
 compat_features:
   - css.properties.image-orientation
   - css.properties.image-orientation.from-image

@@ -12,16 +12,6 @@ status:
     firefox_android: "97"
     safari: "18.2"
     safari_ios: "18.2"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "94"
-      chrome_android: "94"
-      edge: "94"
-      firefox: "97"
-      firefox_android: "97"
-      safari: "18.2"
-      safari_ios: "18.2"
 compat_features:
   - css.properties.scrollbar-gutter
   - css.properties.scrollbar-gutter.auto

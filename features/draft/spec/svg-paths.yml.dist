@@ -6,11 +6,6 @@ status:
   support:
     firefox: "137"
     firefox_android: "137"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "137"
-      firefox_android: "137"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -27,6 +22,7 @@ compat_features:
   - api.SVGPathElement.getTotalLength
   - api.SVGPathElement.pathLength
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "137"

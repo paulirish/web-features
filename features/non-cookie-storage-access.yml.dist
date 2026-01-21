@@ -5,10 +5,6 @@ status:
   baseline: false
   support:
     chrome: "125"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "125"
 compat_features:
   # baseline: false
   # support:
@@ -46,6 +42,7 @@ compat_features:
   - api.StorageAccessHandle.revokeObjectURL
   - api.StorageAccessHandle.sessionStorage
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"

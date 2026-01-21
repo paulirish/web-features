@@ -10,15 +10,6 @@ status:
     firefox_android: "79"
     safari: "17"
     safari_ios: "15.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "53"
-      chrome_android: "53"
-      edge: "79"
-      firefox_android: "79"
-      safari: "17"
-      safari_ios: "15.4"
 compat_features:
   # baseline: false
   # support:

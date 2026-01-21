@@ -7,11 +7,5 @@ status:
     chrome: "85"
     chrome_android: "84"
     edge: "85"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "85"
-      chrome_android: "84"
-      edge: "85"
 compat_features:
   - api.Navigator.getInstalledRelatedApps

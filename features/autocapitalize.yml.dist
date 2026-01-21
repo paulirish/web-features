@@ -10,15 +10,6 @@ status:
     firefox: "111"
     firefox_android: "111"
     safari_ios: "10.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "66"
-      chrome_android: "66"
-      edge: "79"
-      firefox: "111"
-      firefox_android: "111"
-      safari_ios: "10.3"
 compat_features:
   # baseline: false
   # support:
@@ -30,6 +21,7 @@ compat_features:
   #   safari_ios: "5"
   - html.global_attributes.autocapitalize
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "66"

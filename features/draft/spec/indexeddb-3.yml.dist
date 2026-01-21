@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -18,6 +15,7 @@ compat_features:
   #   safari_ios: "8"
   - api.IDBRequest.error.transient_unrecoverable_read_errors
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.IDBIndex.getAllRecords

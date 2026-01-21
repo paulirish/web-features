@@ -9,14 +9,6 @@ status:
     edge: "86"
     safari: "15"
     safari_ios: "15"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "86"
-      chrome_android: "86"
-      edge: "86"
-      safari: "15"
-      safari_ios: "15"
 compat_features:
   - api.WEBGL_multi_draw
   - api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL

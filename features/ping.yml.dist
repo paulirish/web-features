@@ -9,14 +9,6 @@ status:
     edge: "17"
     safari: "6"
     safari_ios: "6"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "12"
-      chrome_android: "18"
-      edge: "17"
-      safari: "6"
-      safari_ios: "6"
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +20,7 @@ compat_features:
   - api.HTMLAnchorElement.ping
   - api.HTMLAreaElement.ping
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "12"

@@ -12,16 +12,6 @@ status:
     firefox_android: "48"
     safari: "16"
     safari_ios: "16.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "50"
-      chrome_android: "50"
-      edge: "17"
-      firefox: "44"
-      firefox_android: "48"
-      safari: "16"
-      safari_ios: "16.4"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -93,6 +83,7 @@ compat_features:
   #   safari_ios: "16.4"
   - api.PushManager.permissionState
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:

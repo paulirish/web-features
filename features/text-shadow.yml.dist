@@ -13,15 +13,5 @@ status:
     firefox_android: "4"
     safari: "1.1"
     safari_ios: "1"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "2"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "3.5"
-      firefox_android: "4"
-      safari: "1.1"
-      safari_ios: "1"
 compat_features:
   - css.properties.text-shadow

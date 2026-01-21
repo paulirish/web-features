@@ -7,12 +7,6 @@ status:
     chrome: "67"
     chrome_android: "67"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "67"
-      chrome_android: "67"
-      edge: "79"
 compat_features:
   - api.AbsoluteOrientationSensor
   - api.AbsoluteOrientationSensor.AbsoluteOrientationSensor

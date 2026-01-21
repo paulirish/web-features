@@ -13,16 +13,6 @@ status:
     firefox_android: "35"
     safari: "9.1"
     safari_ios: "9.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "53"
-      chrome_android: "53"
-      edge: "12"
-      firefox: "35"
-      firefox_android: "35"
-      safari: "9.1"
-      safari_ios: "9.3"
 compat_features:
   - css.properties.filter.blur
   - css.properties.filter.brightness

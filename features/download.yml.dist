@@ -13,16 +13,6 @@ status:
     firefox_android: "20"
     safari: "10.1"
     safari_ios: "13"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "14"
-      chrome_android: "18"
-      edge: "18"
-      firefox: "20"
-      firefox_android: "20"
-      safari: "10.1"
-      safari_ios: "13"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -63,6 +53,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.HTMLAreaElement.download
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2019-09-19
   # baseline_high_date: 2022-03-19

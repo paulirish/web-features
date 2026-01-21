@@ -10,15 +10,6 @@ status:
     firefox_android: "33"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "5"
-      edge: "79"
-      firefox: "29"
-      firefox_android: "33"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   # baseline: false
   # support:
@@ -33,6 +24,7 @@ compat_features:
   - api.SharedWorkerGlobalScope.connect_event
   - api.SharedWorkerGlobalScope.name
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "5"

@@ -12,16 +12,6 @@ status:
     firefox_android: "128"
     safari: "18"
     safari_ios: "18"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "125"
-      chrome_android: "125"
-      edge: "125"
-      firefox: "128"
-      firefox_android: "128"
-      safari: "18"
-      safari_ios: "18"
 compat_features:
   - api.Element.getHTML
   - api.ShadowRoot.getHTML

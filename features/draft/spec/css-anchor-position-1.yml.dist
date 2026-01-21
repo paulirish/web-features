@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -24,6 +21,7 @@ compat_features:
   - css.properties.position-area.span-y-self-end
   - css.properties.position-area.span-y-self-start
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.properties.position-area.self-block-end

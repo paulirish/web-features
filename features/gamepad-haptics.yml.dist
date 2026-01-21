@@ -8,13 +8,6 @@ status:
     chrome_android: "68"
     edge: "79"
     safari: "16.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "68"
-      chrome_android: "68"
-      edge: "79"
-      safari: "16.4"
 compat_features:
   # baseline: false
   # support:
@@ -35,6 +28,7 @@ compat_features:
   - api.GamepadHapticActuator.playEffect
   - api.GamepadHapticActuator.reset
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "68"

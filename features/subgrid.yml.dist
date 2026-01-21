@@ -12,16 +12,6 @@ status:
     firefox_android: "79"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "117"
-      chrome_android: "117"
-      edge: "117"
-      firefox: "71"
-      firefox_android: "79"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   - css.properties.grid-template-columns.subgrid
   - css.properties.grid-template-rows.subgrid

@@ -10,15 +10,6 @@ status:
     firefox: ≤66
     firefox_android: ≤66
     safari: ≤12
-  baselinen:
-    baseline: false
-    support:
-      chrome: "123"
-      chrome_android: "123"
-      edge: "123"
-      firefox: ≤66
-      firefox_android: ≤66
-      safari: ≤12
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-03-22

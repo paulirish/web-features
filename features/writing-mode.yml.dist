@@ -13,17 +13,8 @@ status:
     firefox_android: "41"
     safari: "10.1"
     safari_ios: "10.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "48"
-      chrome_android: "48"
-      edge: "12"
-      firefox: "41"
-      firefox_android: "41"
-      safari: "10.1"
-      safari_ios: "10.3"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27

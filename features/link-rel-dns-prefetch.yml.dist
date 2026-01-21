@@ -10,14 +10,5 @@ status:
     firefox: "127"
     firefox_android: "127"
     safari: "5"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "46"
-      chrome_android: "46"
-      edge: "79"
-      firefox: "127"
-      firefox_android: "127"
-      safari: "5"
 compat_features:
   - html.elements.link.rel.dns-prefetch

@@ -5,10 +5,6 @@ status:
   baseline: false
   support:
     firefox: "116"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "116"
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +16,7 @@ compat_features:
   - api.HTMLMediaElement.setSinkId
   - api.HTMLMediaElement.sinkId
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "116"

@@ -9,14 +9,6 @@ status:
     edge: "123"
     firefox: "126"
     firefox_android: "126"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "123"
-      chrome_android: "123"
-      edge: "123"
-      firefox: "126"
-      firefox_android: "126"
 compat_features:
   - http.headers.Accept-Encoding.zstd
   - http.headers.Content-Encoding.zstd

@@ -9,14 +9,6 @@ status:
     edge: "87"
     firefox: "89"
     firefox_android: "89"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "87"
-      chrome_android: "87"
-      edge: "87"
-      firefox: "89"
-      firefox_android: "89"
 compat_features:
   - api.FontFace.ascentOverride
   - api.FontFace.descentOverride

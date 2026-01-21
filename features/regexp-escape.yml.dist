@@ -12,17 +12,5 @@ status:
     firefox_android: "134"
     safari: "18.2"
     safari_ios: "18.2"
-  baselinen:
-    baseline: low
-    baseline_low_date: 2025-05-06
-    support:
-      chrome: "136"
-      chrome_android: "136"
-      edge: "136"
-      firefox: "134"
-      firefox_android: "134"
-      safari: "18.2"
-      safari_ios: "18.2"
-      nodejs: 24.0.0
 compat_features:
   - javascript.builtins.RegExp.escape

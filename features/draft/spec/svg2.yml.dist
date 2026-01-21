@@ -7,12 +7,6 @@ status:
     chrome: "137"
     chrome_android: "137"
     edge: "137"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "137"
-      chrome_android: "137"
-      edge: "137"
 compat_features:
   # baseline: false
   # support:
@@ -24,6 +18,7 @@ compat_features:
   - css.properties.alignment-baseline.text-after-edge
   - css.properties.alignment-baseline.text-before-edge
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"

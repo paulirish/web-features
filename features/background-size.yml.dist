@@ -13,16 +13,6 @@ status:
     firefox_android: "18"
     safari: "5.1"
     safari_ios: "4.2"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "21"
-      chrome_android: "25"
-      edge: "12"
-      firefox: "9"
-      firefox_android: "18"
-      safari: "5.1"
-      safari_ios: "4.2"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29

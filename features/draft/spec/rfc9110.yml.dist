@@ -7,12 +7,6 @@ status:
     chrome: "99"
     chrome_android: "99"
     edge: "99"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "99"
-      chrome_android: "99"
-      edge: "99"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29

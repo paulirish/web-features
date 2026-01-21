@@ -13,19 +13,6 @@ status:
     firefox_android: "52"
     safari: "10.1"
     safari_ios: "10.3"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2017-03-27
-    baseline_high_date: 2019-09-27
-    support:
-      chrome: "52"
-      chrome_android: "52"
-      edge: "14"
-      firefox: "52"
-      firefox_android: "52"
-      safari: "10.1"
-      safari_ios: "10.3"
-      nodejs: 7.0.0
 compat_features:
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment

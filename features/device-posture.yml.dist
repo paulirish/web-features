@@ -7,12 +7,6 @@ status:
     chrome: "132"
     chrome_android: "132"
     edge: "132"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "132"
-      chrome_android: "132"
-      edge: "132"
 compat_features:
   - api.DevicePosture
   - api.DevicePosture.change_event

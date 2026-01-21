@@ -7,12 +7,6 @@ status:
     chrome_android: "25"
     firefox_android: "79"
     safari_ios: "10"
-  baselinen:
-    baseline: false
-    support:
-      chrome_android: "25"
-      firefox_android: "79"
-      safari_ios: "10"
 compat_features:
   - api.HTMLInputElement.capture
   - html.elements.input.capture

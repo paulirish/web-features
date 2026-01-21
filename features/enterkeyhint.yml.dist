@@ -13,16 +13,6 @@ status:
     firefox_android: "94"
     safari: "13.1"
     safari_ios: "13.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "77"
-      chrome_android: "77"
-      edge: "79"
-      firefox: "94"
-      firefox_android: "94"
-      safari: "13.1"
-      safari_ios: "13.4"
 compat_features:
   - api.HTMLElement.enterKeyHint
   - html.global_attributes.enterkeyhint

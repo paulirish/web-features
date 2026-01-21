@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -21,6 +18,7 @@ compat_features:
   - api.SpeechGrammarList.length
   - api.SpeechRecognition.grammars
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.SpeechGrammar

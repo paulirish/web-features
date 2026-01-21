@@ -9,13 +9,5 @@ status:
     edge: "98"
     firefox: "107"
     firefox_android: "107"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "98"
-      chrome_android: "98"
-      edge: "98"
-      firefox: "107"
-      firefox_android: "107"
 compat_features:
   - css.at-rules.font-face.OpenType_COLRv1

@@ -12,16 +12,6 @@ status:
     firefox_android: "97"
     safari: "15.4"
     safari_ios: "15.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "136"
-      chrome_android: "136"
-      edge: "136"
-      firefox: "97"
-      firefox_android: "97"
-      safari: "15.4"
-      safari_ios: "15.4"
 compat_features:
   - css.properties.print-color-adjust
   - css.properties.print-color-adjust.economy

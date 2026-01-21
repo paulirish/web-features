@@ -13,16 +13,6 @@ status:
     firefox_android: "81"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "90"
-      chrome_android: "90"
-      edge: "90"
-      firefox: "81"
-      firefox_android: "81"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   - css.properties.overflow-x.clip
   - css.properties.overflow-y.clip

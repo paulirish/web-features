@@ -6,11 +6,6 @@ status:
   support:
     safari: "15.4"
     safari_ios: "15.4"
-  baselinen:
-    baseline: false
-    support:
-      safari: "15.4"
-      safari_ios: "15.4"
 compat_features:
   - css.selectors.buffering
   - css.selectors.muted

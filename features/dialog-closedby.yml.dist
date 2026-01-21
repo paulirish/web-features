@@ -9,14 +9,6 @@ status:
     edge: "134"
     firefox: "141"
     firefox_android: "141"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "134"
-      chrome_android: "134"
-      edge: "134"
-      firefox: "141"
-      firefox_android: "141"
 compat_features:
   - api.HTMLDialogElement.closedBy
   - html.elements.dialog.closedby

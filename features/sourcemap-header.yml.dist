@@ -13,15 +13,5 @@ status:
     firefox_android: "55"
     safari: "7"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "18"
-      chrome_android: "18"
-      edge: "79"
-      firefox: "55"
-      firefox_android: "55"
-      safari: "7"
-      safari_ios: "7"
 compat_features:
   - http.headers.SourceMap

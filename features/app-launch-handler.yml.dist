@@ -6,11 +6,6 @@ status:
   support:
     chrome: "110"
     edge: "110"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "110"
-      edge: "110"
 compat_features:
   # baseline: false
   # support:
@@ -29,6 +24,7 @@ compat_features:
   - api.LaunchQueue.setConsumer
   - api.Window.launchQueue
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "110"

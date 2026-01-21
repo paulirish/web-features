@@ -7,12 +7,6 @@ status:
     chrome: "90"
     chrome_android: "90"
     edge: "90"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "90"
-      chrome_android: "90"
-      edge: "90"
 compat_features:
   - api.XRFrame.getLightEstimate
   - api.XRLightEstimate

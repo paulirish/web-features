@@ -7,11 +7,5 @@ status:
     chrome: "124"
     chrome_android: "124"
     edge: "124"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "124"
-      chrome_android: "124"
-      edge: "124"
 compat_features:
   - api.ClipboardItem.type_image_svg_xml

@@ -13,16 +13,6 @@ status:
     firefox_android: "62"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "68"
-      chrome_android: "68"
-      edge: "79"
-      firefox: "62"
-      firefox_android: "62"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-09-12
@@ -53,6 +43,7 @@ compat_features:
   #   safari_ios: "16"
   - css.types.resolution.dppx
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-09-12
   # baseline_high_date: 2025-03-12

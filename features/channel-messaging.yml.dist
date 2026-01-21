@@ -13,19 +13,6 @@ status:
     firefox_android: "41"
     safari: "5"
     safari_ios: "4.2"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2020-10-20
-    baseline_high_date: 2023-04-20
-    support:
-      chrome: "4"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "41"
-      firefox_android: "41"
-      safari: "5"
-      safari_ios: "4.2"
-      nodejs: 15.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -61,6 +48,7 @@ compat_features:
   - api.MessagePort.postMessage
   - api.MessagePort.start
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-09-22
   # baseline_high_date: 2018-03-22

@@ -7,12 +7,6 @@ status:
     chrome: "129"
     chrome_android: "129"
     edge: "129"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "129"
-      chrome_android: "129"
-      edge: "129"
 compat_features:
   - webdriver.classic.CreateVirtualPressureSource
   - webdriver.classic.DeleteVirtualPressureSource

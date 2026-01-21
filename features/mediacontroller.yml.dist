@@ -6,11 +6,6 @@ status:
   support:
     safari: "7"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      safari: "7"
-      safari_ios: "7"
 compat_features:
   # baseline: false
   # support:
@@ -22,6 +17,7 @@ compat_features:
   - api.MediaController.pause
   - api.MediaController.play
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "7"

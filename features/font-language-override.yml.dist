@@ -6,10 +6,5 @@ status:
   support:
     firefox: "34"
     firefox_android: "34"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "34"
-      firefox_android: "34"
 compat_features:
   - css.properties.font-language-override

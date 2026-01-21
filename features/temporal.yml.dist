@@ -6,12 +6,8 @@ status:
   support:
     firefox: "139"
     firefox_android: "139"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "139"
-      firefox_android: "139"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "139"

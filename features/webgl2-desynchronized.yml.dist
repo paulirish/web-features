@@ -7,11 +7,5 @@ status:
     chrome: "81"
     chrome_android: "75"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "81"
-      chrome_android: "75"
-      edge: "79"
 compat_features:
   - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter

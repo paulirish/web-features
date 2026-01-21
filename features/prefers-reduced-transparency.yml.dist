@@ -7,12 +7,6 @@ status:
     chrome: "119"
     chrome_android: "119"
     edge: "119"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "119"
-      chrome_android: "119"
-      edge: "119"
 compat_features:
   # baseline: false
   # support:
@@ -21,6 +15,7 @@ compat_features:
   #   edge: "118"
   - css.at-rules.media.prefers-reduced-transparency
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "119"

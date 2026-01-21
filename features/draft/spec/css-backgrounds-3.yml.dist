@@ -6,11 +6,6 @@ status:
   support:
     safari: "5"
     safari_ios: "4.2"
-  baselinen:
-    baseline: false
-    support:
-      safari: "5"
-      safari_ios: "4.2"
 compat_features:
   - css.properties.background-repeat-x
   - css.properties.background-repeat-y

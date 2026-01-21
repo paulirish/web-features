@@ -13,19 +13,6 @@ status:
     firefox_android: "102"
     safari: "14.1"
     safari_ios: "14.5"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2022-06-28
-    baseline_high_date: 2024-12-28
-    support:
-      chrome: "67"
-      chrome_android: "67"
-      edge: "79"
-      firefox: "102"
-      firefox_android: "102"
-      safari: "14.1"
-      safari_ios: "14.5"
-      nodejs: 18.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-01-29
@@ -215,6 +202,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.ReadableStream.pipeThrough
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-06-28
   # baseline_high_date: 2024-12-28

@@ -13,16 +13,6 @@ status:
     firefox_android: "31"
     safari: "9.1"
     safari_ios: "9.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "49"
-      chrome_android: "49"
-      edge: "15"
-      firefox: "31"
-      firefox_android: "31"
-      safari: "9.1"
-      safari_ios: "9.3"
 compat_features:
   - css.properties.custom-property
   - css.types.var

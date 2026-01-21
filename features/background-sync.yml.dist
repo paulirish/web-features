@@ -7,13 +7,8 @@ status:
     chrome: "49"
     chrome_android: "49"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "49"
-      chrome_android: "49"
-      edge: "79"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "49"

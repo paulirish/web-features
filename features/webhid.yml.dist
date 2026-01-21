@@ -6,11 +6,6 @@ status:
   support:
     chrome: "89"
     edge: "89"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "89"
-      edge: "89"
 compat_features:
   # baseline: false
   # support:
@@ -19,6 +14,7 @@ compat_features:
   #   edge: "89"
   - html.elements.iframe.allow.hid
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"

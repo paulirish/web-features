@@ -7,11 +7,5 @@ status:
     chrome: "139"
     chrome_android: "139"
     edge: "139"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "139"
-      chrome_android: "139"
-      edge: "139"
 compat_features:
   - api.RTCEncodedAudioFrame.getMetadata.return_object_property_audioLevel

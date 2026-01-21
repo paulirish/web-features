@@ -13,16 +13,6 @@ status:
     firefox_android: "36"
     safari: "11"
     safari_ios: "11"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "53"
-      chrome_android: "53"
-      edge: "12"
-      firefox: "36"
-      firefox_android: "36"
-      safari: "11"
-      safari_ios: "11"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-09-19
@@ -164,6 +154,7 @@ compat_features:
   #   safari_ios: "11"
   - api.MediaStreamTrack.getConstraints
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-09-19
   # baseline_high_date: 2020-03-19

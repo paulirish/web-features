@@ -9,15 +9,8 @@ status:
     edge: "128"
     firefox: "20"
     firefox_android: "20"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "128"
-      chrome_android: "128"
-      edge: "128"
-      firefox: "20"
-      firefox_android: "20"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"

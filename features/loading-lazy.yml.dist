@@ -12,16 +12,6 @@ status:
     firefox_android: "121"
     safari: "16.4"
     safari_ios: "16.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "77"
-      chrome_android: "77"
-      edge: "79"
-      firefox: "121"
-      firefox_android: "121"
-      safari: "16.4"
-      safari_ios: "16.4"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-03-14
@@ -37,6 +27,7 @@ compat_features:
   - api.HTMLImageElement.loading
   - html.elements.img.loading
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-12-19
   # support:

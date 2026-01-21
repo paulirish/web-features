@@ -13,16 +13,6 @@ status:
     firefox_android: "6"
     safari: "13"
     safari_ios: "13"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "63"
-      chrome_android: "63"
-      edge: "12"
-      firefox: "6"
-      firefox_android: "6"
-      safari: "13"
-      safari_ios: "13"
 compat_features:
   - api.Window.afterprint_event
   - api.Window.beforeprint_event

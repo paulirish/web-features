@@ -7,12 +7,6 @@ status:
     chrome: "107"
     chrome_android: "107"
     edge: "107"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "107"
-      chrome_android: "107"
-      edge: "107"
 compat_features:
   - api.XRCamera
   - api.XRCamera.height

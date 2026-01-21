@@ -13,16 +13,6 @@ status:
     firefox_android: "6"
     safari: "6"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "6"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "6"
-      firefox_android: "6"
-      safari: "6"
-      safari_ios: "7"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -40,6 +30,7 @@ compat_features:
   - api.HTMLProgressElement.position
   - api.HTMLProgressElement.value
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

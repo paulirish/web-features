@@ -6,11 +6,6 @@ status:
   support:
     chrome: "103"
     edge: "103"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "103"
-      edge: "103"
 compat_features:
   - api.FontData
   - api.FontData.blob

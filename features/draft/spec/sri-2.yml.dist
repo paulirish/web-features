@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -18,6 +15,7 @@ compat_features:
   - http.headers.Integrity-Policy-Report-Only.blocked-destinations_script
   - http.headers.Integrity-Policy.blocked-destinations_script
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - http.headers.Integrity-Policy-Report-Only.blocked-destinations_style

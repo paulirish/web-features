@@ -12,16 +12,6 @@ status:
     firefox_android: "124"
     safari: "17.4"
     safari_ios: "17.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "114"
-      chrome_android: "114"
-      edge: "114"
-      firefox: "124"
-      firefox_android: "124"
-      safari: "17.4"
-      safari_ios: "17.4"
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-03-05
@@ -35,6 +25,7 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.text-wrap
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2024-03-19
   # support:

@@ -13,16 +13,6 @@ status:
     firefox_android: "66"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "107"
-      chrome_android: "107"
-      edge: "107"
-      firefox: "66"
-      firefox_android: "66"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   - css.properties.grid-template-columns.animation
   - css.properties.grid-template-rows.animation

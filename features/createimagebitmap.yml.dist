@@ -12,16 +12,6 @@ status:
     firefox_android: "98"
     safari: "17.2"
     safari_ios: "17.2"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "59"
-      chrome_android: "59"
-      edge: "79"
-      firefox: "98"
-      firefox_android: "98"
-      safari: "17.2"
-      safari_ios: "17.2"
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-09-20

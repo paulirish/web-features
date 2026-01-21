@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-03-31
@@ -27,6 +24,7 @@ compat_features:
   #   edge: "133"
   - css.types.attr.type-or-unit
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.types.attr.type-or-unit.angle

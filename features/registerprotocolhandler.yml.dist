@@ -8,14 +8,8 @@ status:
     edge: "79"
     firefox: "2"
     firefox_android: "4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "13"
-      edge: "79"
-      firefox: "2"
-      firefox_android: "4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "13"

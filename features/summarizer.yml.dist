@@ -5,10 +5,6 @@ status:
   baseline: false
   support:
     chrome: "138"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "138"
 compat_features:
   - api.Summarizer
   - api.Summarizer.availability_static

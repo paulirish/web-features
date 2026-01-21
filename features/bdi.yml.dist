@@ -13,15 +13,5 @@ status:
     firefox_android: "10"
     safari: "6"
     safari_ios: "6"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "16"
-      chrome_android: "18"
-      edge: "79"
-      firefox: "10"
-      firefox_android: "10"
-      safari: "6"
-      safari_ios: "6"
 compat_features:
   - html.elements.bdi

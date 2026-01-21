@@ -10,15 +10,6 @@ status:
     firefox: "52"
     safari: "11.1"
     safari_ios: "18.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "22"
-      chrome_android: "132"
-      edge: "79"
-      firefox: "52"
-      safari: "11.1"
-      safari_ios: "18.4"
 compat_features:
   # baseline: high
   # baseline_low_date: ≤2018-10-02

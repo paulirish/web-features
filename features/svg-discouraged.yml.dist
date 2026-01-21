@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -225,6 +222,7 @@ compat_features:
   - svg.global_attributes.glyph-orientation-horizontal
   - svg.global_attributes.glyph-orientation-vertical
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.SVGAElement.text

@@ -9,14 +9,6 @@ status:
     edge: "134"
     firefox: "141"
     firefox_android: "141"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "134"
-      chrome_android: "134"
-      edge: "134"
-      firefox: "141"
-      firefox_android: "141"
 compat_features:
   # baseline: false
   # support:
@@ -36,6 +28,7 @@ compat_features:
   #   firefox_android: "141"
   - javascript.builtins.Symbol.asyncDispose
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "134"

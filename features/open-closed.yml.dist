@@ -9,13 +9,5 @@ status:
     edge: "133"
     firefox: "136"
     firefox_android: "136"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "133"
-      chrome_android: "133"
-      edge: "133"
-      firefox: "136"
-      firefox_android: "136"
 compat_features:
   - css.selectors.open

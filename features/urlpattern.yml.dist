@@ -9,15 +9,8 @@ status:
     edge: "95"
     firefox: "142"
     firefox_android: "142"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "95"
-      chrome_android: "95"
-      edge: "95"
-      firefox: "142"
-      firefox_android: "142"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "95"

@@ -13,16 +13,6 @@ status:
     firefox_android: "52"
     safari: "5.1"
     safari_ios: "5"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "11"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "52"
-      firefox_android: "52"
-      safari: "5.1"
-      safari_ios: "5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -131,6 +121,7 @@ compat_features:
   - api.Range.getBoundingClientRect
   - api.Range.getClientRects
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-03-07
   # baseline_high_date: 2019-09-07

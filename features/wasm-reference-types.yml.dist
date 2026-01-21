@@ -13,15 +13,5 @@ status:
     firefox_android: "79"
     safari: "15.1"
     safari_ios: "15.1"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "96"
-      chrome_android: "96"
-      edge: "96"
-      firefox: "79"
-      firefox_android: "79"
-      safari: "15.1"
-      safari_ios: "15.1"
 compat_features:
   - webassembly.reference-types

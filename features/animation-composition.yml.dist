@@ -12,15 +12,5 @@ status:
     firefox_android: "115"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "112"
-      chrome_android: "112"
-      edge: "112"
-      firefox: "115"
-      firefox_android: "115"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   - css.properties.animation-composition

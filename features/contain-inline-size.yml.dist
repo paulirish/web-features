@@ -13,15 +13,5 @@ status:
     firefox_android: "101"
     safari: "16"
     safari_ios: "16"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "105"
-      chrome_android: "105"
-      edge: "105"
-      firefox: "101"
-      firefox_android: "101"
-      safari: "16"
-      safari_ios: "16"
 compat_features:
   - css.properties.contain.inline-size

@@ -6,11 +6,6 @@ status:
   support:
     firefox: "142"
     firefox_android: "142"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "142"
-      firefox_android: "142"
 compat_features:
   # baseline: false
   # support:
@@ -21,6 +16,7 @@ compat_features:
   #   firefox_android: "142"
   - api.Animation.overallProgress
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "142"

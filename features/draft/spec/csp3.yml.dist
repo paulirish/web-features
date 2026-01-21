@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +25,7 @@ compat_features:
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - http.headers.Content-Security-Policy.script-src.trusted-types-eval

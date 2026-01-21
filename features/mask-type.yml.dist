@@ -13,16 +13,6 @@ status:
     firefox_android: "35"
     safari: "7"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "24"
-      chrome_android: "25"
-      edge: "79"
-      firefox: "35"
-      firefox_android: "35"
-      safari: "7"
-      safari_ios: "7"
 compat_features:
   - css.properties.mask-type
   - css.properties.mask-type.alpha

@@ -11,16 +11,6 @@ status:
     firefox_android: "56"
     safari: "14.1"
     safari_ios: "14.5"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "56"
-      chrome_android: "56"
-      edge: "18"
-      firefox: "56"
-      firefox_android: "56"
-      safari: "14.1"
-      safari_ios: "14.5"
 compat_features:
   # baseline: false
   # support:

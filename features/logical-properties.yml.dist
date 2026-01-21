@@ -13,16 +13,6 @@ status:
     firefox_android: "66"
     safari: "15"
     safari_ios: "15"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "89"
-      chrome_android: "89"
-      edge: "89"
-      firefox: "66"
-      firefox_android: "66"
-      safari: "15"
-      safari_ios: "15"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -152,6 +142,7 @@ compat_features:
   - css.properties.padding-block
   - css.properties.padding-inline
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20

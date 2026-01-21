@@ -7,13 +7,8 @@ status:
     chrome: "125"
     chrome_android: "125"
     edge: "125"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "125"
-      chrome_android: "125"
-      edge: "125"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"

@@ -7,13 +7,8 @@ status:
     chrome: "102"
     chrome_android: "102"
     edge: "102"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "102"
-      chrome_android: "102"
-      edge: "102"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "102"

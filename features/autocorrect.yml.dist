@@ -6,11 +6,6 @@ status:
   support:
     firefox: "136"
     firefox_android: "136"
-  baselinen:
-    baseline: false
-    support:
-      firefox: "136"
-      firefox_android: "136"
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +15,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.HTMLElement.autocorrect
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "136"

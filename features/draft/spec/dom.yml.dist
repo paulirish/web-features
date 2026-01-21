@@ -7,11 +7,5 @@ status:
     chrome: "74"
     chrome_android: "74"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "74"
-      chrome_android: "74"
-      edge: "79"
 compat_features:
   - api.Document.featurePolicy

@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -966,6 +963,7 @@ compat_features:
   #   firefox_android: "140"
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.Navigator.authentication

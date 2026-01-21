@@ -13,18 +13,5 @@ status:
     firefox_android: "40"
     safari: "9"
     safari_ios: "9"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2015-09-30
-    baseline_high_date: 2018-03-30
-    support:
-      chrome: "44"
-      chrome_android: "44"
-      edge: "12"
-      firefox: "40"
-      firefox_android: "40"
-      safari: "9"
-      safari_ios: "9"
-      nodejs: 4.0.0
 compat_features:
   - javascript.grammar.unicode_point_escapes

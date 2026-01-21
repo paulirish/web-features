@@ -13,16 +13,6 @@ status:
     firefox_android: "92"
     safari: "13"
     safari_ios: "13"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "67"
-      chrome_android: "70"
-      edge: "18"
-      firefox: "60"
-      firefox_android: "92"
-      safari: "13"
-      safari_ios: "13"
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-09-19
@@ -45,6 +35,7 @@ compat_features:
   - api.CredentialsContainer.get.publicKey_option.extensions
   - api.CredentialsContainer.get.publicKey_option.extensions.appid
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-09-07
   # baseline_high_date: 2024-03-07

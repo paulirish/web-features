@@ -13,15 +13,5 @@ status:
     firefox_android: "24"
     safari: "8"
     safari_ios: "8"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "29"
-      chrome_android: "29"
-      edge: "12"
-      firefox: "24"
-      firefox_android: "24"
-      safari: "8"
-      safari_ios: "8"
 compat_features:
   - api.OES_texture_float_linear

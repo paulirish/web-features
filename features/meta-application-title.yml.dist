@@ -7,11 +7,5 @@ status:
     chrome: "134"
     chrome_android: "134"
     edge: "134"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "134"
-      chrome_android: "134"
-      edge: "134"
 compat_features:
   - html.elements.meta.name.application-title

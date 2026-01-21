@@ -9,14 +9,6 @@ status:
     edge: "103"
     firefox: "123"
     firefox_android: "123"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "103"
-      chrome_android: "103"
-      edge: "103"
-      firefox: "123"
-      firefox_android: "123"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-11-21
@@ -31,6 +23,7 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "103"

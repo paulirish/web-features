@@ -7,12 +7,6 @@ status:
     chrome: "139"
     chrome_android: "139"
     edge: "139"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "139"
-      chrome_android: "139"
-      edge: "139"
 compat_features:
   # baseline: false
   # support:
@@ -43,6 +37,7 @@ compat_features:
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "139"

@@ -6,11 +6,6 @@ status:
   support:
     chrome: "67"
     chrome_android: "67"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "67"
-      chrome_android: "67"
 compat_features:
   # baseline: false
   # support:

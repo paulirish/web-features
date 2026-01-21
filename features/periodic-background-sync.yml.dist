@@ -7,12 +7,6 @@ status:
     chrome: "80"
     chrome_android: "80"
     edge: "80"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "80"
-      chrome_android: "80"
-      edge: "80"
 compat_features:
   - api.PeriodicSyncEvent
   - api.PeriodicSyncEvent.PeriodicSyncEvent

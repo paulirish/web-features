@@ -10,15 +10,6 @@ status:
     firefox: "1"
     firefox_android: "4"
     safari: "3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "1"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "1"
-      firefox_android: "4"
-      safari: "3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -46,6 +37,7 @@ compat_features:
   #   safari_ios: "11"
   - api.BeforeUnloadEvent.user_interaction
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "1"

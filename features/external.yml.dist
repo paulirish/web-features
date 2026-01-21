@@ -9,14 +9,6 @@ status:
     edge: "12"
     firefox: "2"
     firefox_android: "4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "9"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "2"
-      firefox_android: "4"
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +20,7 @@ compat_features:
   - api.External
   - api.External.AddSearchProvider
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "9"

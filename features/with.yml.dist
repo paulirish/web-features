@@ -11,17 +11,6 @@ status:
     firefox_android: "48"
     safari: "10"
     safari_ios: "10"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "38"
-      chrome_android: "38"
-      edge: "12"
-      firefox: "48"
-      firefox_android: "48"
-      safari: "10"
-      safari_ios: "10"
-      nodejs: 0.12.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2016-08-02

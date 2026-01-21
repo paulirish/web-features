@@ -13,16 +13,6 @@ status:
     firefox_android: "4"
     safari: ≤4
     safari_ios: ≤3
-  baselinen:
-    baseline: false
-    support:
-      chrome: "1"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "1"
-      firefox_android: "4"
-      safari: ≤4
-      safari_ios: ≤3
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -62,6 +52,7 @@ compat_features:
   - api.HTMLTextAreaElement.selectionStart
   - api.HTMLTextAreaElement.setSelectionRange
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29

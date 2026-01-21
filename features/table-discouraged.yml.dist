@@ -9,14 +9,6 @@ status:
     edge: "12"
     safari: ≤4
     safari_ios: ≤3.2
-  baselinen:
-    baseline: false
-    support:
-      chrome: "1"
-      chrome_android: "18"
-      edge: "12"
-      safari: ≤4
-      safari_ios: ≤3.2
 compat_features:
   # baseline: false
   # support:
@@ -136,6 +128,7 @@ compat_features:
   - html.elements.th.charoff
   - html.elements.thead.charoff
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "1"

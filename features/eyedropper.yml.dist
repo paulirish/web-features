@@ -6,11 +6,6 @@ status:
   support:
     chrome: "96"
     edge: "96"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "96"
-      edge: "96"
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +15,7 @@ compat_features:
   - api.EyeDropper.EyeDropper
   - api.EyeDropper.open
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "96"

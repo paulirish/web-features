@@ -7,12 +7,6 @@ status:
     chrome: "94"
     chrome_android: "94"
     edge: "93"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "94"
-      chrome_android: "94"
-      edge: "93"
 compat_features:
   - api.DelegatedInkTrailPresenter
   - api.DelegatedInkTrailPresenter.presentationArea

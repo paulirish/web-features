@@ -13,16 +13,6 @@ status:
     firefox_android: "79"
     safari: "14.1"
     safari_ios: "14.5"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "87"
-      chrome_android: "87"
-      edge: "87"
-      firefox: "70"
-      firefox_android: "79"
-      safari: "14.1"
-      safari_ios: "14.5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -38,6 +28,7 @@ compat_features:
   - css.properties.quotes
   - css.properties.quotes.none
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26

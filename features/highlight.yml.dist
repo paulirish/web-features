@@ -9,14 +9,6 @@ status:
     edge: "105"
     safari: "17.2"
     safari_ios: "17.2"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "105"
-      chrome_android: "105"
-      edge: "105"
-      safari: "17.2"
-      safari_ios: "17.2"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-06-24
@@ -56,6 +48,7 @@ compat_features:
   - api.HighlightRegistry.size
   - api.HighlightRegistry.values
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "105"

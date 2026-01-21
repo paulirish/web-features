@@ -13,16 +13,6 @@ status:
     firefox_android: "52"
     safari: "11.1"
     safari_ios: "11.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "55"
-      chrome_android: "55"
-      edge: "15"
-      firefox: "52"
-      firefox_android: "52"
-      safari: "11.1"
-      safari_ios: "11.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-12
@@ -37,6 +27,7 @@ compat_features:
   #   safari_ios: "11.3"
   - api.isSecureContext
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2018-04-12
   # baseline_high_date: 2020-10-12

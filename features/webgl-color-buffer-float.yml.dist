@@ -13,15 +13,5 @@ status:
     firefox_android: "30"
     safari: "14"
     safari_ios: "15"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "63"
-      chrome_android: "63"
-      edge: "17"
-      firefox: "30"
-      firefox_android: "30"
-      safari: "14"
-      safari_ios: "15"
 compat_features:
   - api.WEBGL_color_buffer_float

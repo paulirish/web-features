@@ -13,16 +13,6 @@ status:
     firefox_android: "52"
     safari: "10.1"
     safari_ios: "10.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "57"
-      chrome_android: "57"
-      edge: "16"
-      firefox: "52"
-      firefox_android: "52"
-      safari: "10.1"
-      safari_ios: "10.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -82,6 +72,7 @@ compat_features:
   - css.properties.justify-self
   - css.properties.justify-self.grid_context
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17

@@ -7,12 +7,6 @@ status:
     chrome: "69"
     chrome_android: "69"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "69"
-      chrome_android: "69"
-      edge: "79"
 compat_features:
   - api.Keyboard.getLayoutMap
   - api.KeyboardLayoutMap

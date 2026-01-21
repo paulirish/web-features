@@ -13,16 +13,6 @@ status:
     firefox_android: "38"
     safari: "10.1"
     safari_ios: "10.3"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "38"
-      chrome_android: "38"
-      edge: "13"
-      firefox: "38"
-      firefox_android: "38"
-      safari: "10.1"
-      safari_ios: "10.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -78,6 +68,7 @@ compat_features:
   #   safari_ios: "9.3"
   - api.HTMLImageElement.sizes
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27

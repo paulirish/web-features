@@ -6,11 +6,6 @@ status:
   support:
     chrome: "105"
     edge: "105"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "105"
-      edge: "105"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-01-23
@@ -45,6 +40,7 @@ compat_features:
   #   edge: "105"
   - api.fetch.body_readablestream
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "105"

@@ -9,14 +9,5 @@ status:
     edge: "133"
     firefox: "134"
     firefox_android: "134"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "133"
-      chrome_android: "133"
-      edge: "133"
-      firefox: "134"
-      firefox_android: "134"
-      nodejs: 24.0.0
 compat_features:
   - webassembly.memory64

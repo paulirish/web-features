@@ -9,14 +9,6 @@ status:
     edge: "124"
     firefox: "128"
     firefox_android: "128"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "124"
-      chrome_android: "124"
-      edge: "124"
-      firefox: "128"
-      firefox_android: "128"
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +20,7 @@ compat_features:
   - api.Element.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "124"

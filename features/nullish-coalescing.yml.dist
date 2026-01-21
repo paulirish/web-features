@@ -13,19 +13,6 @@ status:
     firefox_android: "79"
     safari: "14"
     safari_ios: "14"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2020-10-20
-    baseline_high_date: 2023-04-20
-    support:
-      chrome: "85"
-      chrome_android: "85"
-      edge: "85"
-      firefox: "79"
-      firefox_android: "79"
-      safari: "14"
-      safari_ios: "14"
-      nodejs: 15.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -40,6 +27,7 @@ compat_features:
   #   safari_ios: "13.4"
   - javascript.operators.nullish_coalescing
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16

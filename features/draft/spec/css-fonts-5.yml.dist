@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +17,7 @@ compat_features:
   - css.at-rules.font-face.font-width
   - css.properties.font-width.percentage
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.CSSFontFaceDescriptors

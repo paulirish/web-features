@@ -13,16 +13,6 @@ status:
     firefox_android: "49"
     safari: "8"
     safari_ios: "8"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "30"
-      chrome_android: "30"
-      edge: "12"
-      firefox: "49"
-      firefox_android: "49"
-      safari: "8"
-      safari_ios: "8"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -67,6 +57,7 @@ compat_features:
   #   safari_ios: "4"
   - css.properties.background-repeat.2-value
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20

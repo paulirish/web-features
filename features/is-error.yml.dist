@@ -9,13 +9,5 @@ status:
     edge: "134"
     firefox: "138"
     firefox_android: "138"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "134"
-      chrome_android: "134"
-      edge: "134"
-      firefox: "138"
-      firefox_android: "138"
 compat_features:
   - javascript.builtins.Error.isError

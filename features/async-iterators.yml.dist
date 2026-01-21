@@ -13,19 +13,6 @@ status:
     firefox_android: "57"
     safari: "12"
     safari_ios: "12"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2020-01-15
-    baseline_high_date: 2022-07-15
-    support:
-      chrome: "63"
-      chrome_android: "63"
-      edge: "79"
-      firefox: "57"
-      firefox_android: "57"
-      safari: "12"
-      safari_ios: "12"
-      nodejs: 10.0.0
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-12-06
@@ -55,6 +42,7 @@ compat_features:
   - javascript.builtins.AsyncIterator.@@asyncIterator
   - javascript.builtins.Symbol.asyncIterator
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15

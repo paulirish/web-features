@@ -13,18 +13,5 @@ status:
     firefox_android: "67"
     safari: "13"
     safari_ios: "13"
-  baselinen:
-    baseline: high
-    baseline_low_date: 2020-01-15
-    baseline_high_date: 2022-07-15
-    support:
-      chrome: "73"
-      chrome_android: "73"
-      edge: "79"
-      firefox: "67"
-      firefox_android: "67"
-      safari: "13"
-      safari_ios: "13"
-      nodejs: 12.0.0
 compat_features:
   - javascript.builtins.String.matchAll

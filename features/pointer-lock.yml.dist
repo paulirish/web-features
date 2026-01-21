@@ -9,14 +9,6 @@ status:
     firefox: "50"
     firefox_android: "50"
     safari: "10.1"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "37"
-      edge: "13"
-      firefox: "50"
-      firefox_android: "50"
-      safari: "10.1"
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +20,7 @@ compat_features:
   - api.Document.pointerlockchange_event
   - api.Document.pointerlockerror_event
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "37"

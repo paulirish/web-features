@@ -13,16 +13,6 @@ status:
     firefox_android: "96"
     safari: "13"
     safari_ios: "13"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "98"
-      chrome_android: "98"
-      edge: "98"
-      firefox: "96"
-      firefox_android: "96"
-      safari: "13"
-      safari_ios: "13"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-01-11
@@ -53,6 +43,7 @@ compat_features:
   - css.properties.color-scheme.light
   - css.properties.color-scheme.normal
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-02-03
   # baseline_high_date: 2024-08-03

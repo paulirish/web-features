@@ -7,12 +7,6 @@ status:
     chrome: "47"
     chrome_android: "47"
     edge: "79"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "47"
-      chrome_android: "47"
-      edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -23,6 +17,7 @@ compat_features:
   #   firefox_android: "50"
   - html.elements.iframe.sandbox.allow-presentation
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "47"

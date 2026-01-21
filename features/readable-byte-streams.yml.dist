@@ -9,16 +9,8 @@ status:
     edge: "89"
     firefox: "102"
     firefox_android: "102"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "89"
-      chrome_android: "89"
-      edge: "89"
-      firefox: "102"
-      firefox_android: "102"
-      nodejs: 18.0.0
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"

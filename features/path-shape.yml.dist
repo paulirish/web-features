@@ -4,9 +4,6 @@
 status:
   baseline: false
   support: {}
-  baselinen:
-    baseline: false
-    support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -56,6 +53,7 @@ compat_features:
   #   firefox_android: "97"
   - css.types.basic-shape.path.d
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.types.basic-shape.path.shape-outside

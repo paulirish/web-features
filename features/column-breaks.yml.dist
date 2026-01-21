@@ -7,12 +7,6 @@ status:
     chrome: "102"
     chrome_android: "102"
     edge: "102"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "102"
-      chrome_android: "102"
-      edge: "102"
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-01-29
@@ -81,6 +75,7 @@ compat_features:
   #   edge: "12"
   - css.properties.break-before.multicol_context.column
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "102"

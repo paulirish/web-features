@@ -13,15 +13,5 @@ status:
     firefox_android: "4"
     safari: "7"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "4"
-      chrome_android: "18"
-      edge: "12"
-      firefox: "4"
-      firefox_android: "4"
-      safari: "7"
-      safari_ios: "7"
 compat_features:
   - http.headers.Strict-Transport-Security

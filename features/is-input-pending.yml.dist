@@ -7,12 +7,6 @@ status:
     chrome: "87"
     chrome_android: "87"
     edge: "87"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "87"
-      chrome_android: "87"
-      edge: "87"
 compat_features:
   - api.Navigator.scheduling
   - api.Scheduling

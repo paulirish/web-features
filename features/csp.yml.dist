@@ -13,17 +13,8 @@ status:
     firefox_android: "23"
     safari: "7"
     safari_ios: "7"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "25"
-      chrome_android: "25"
-      edge: "14"
-      firefox: "23"
-      firefox_android: "23"
-      safari: "7"
-      safari_ios: "7"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-08-02
   # baseline_high_date: 2019-02-02

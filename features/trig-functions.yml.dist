@@ -12,16 +12,6 @@ status:
     firefox_android: "108"
     safari: "15.4"
     safari_ios: "15.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "111"
-      chrome_android: "111"
-      edge: "111"
-      firefox: "108"
-      firefox_android: "108"
-      safari: "15.4"
-      safari_ios: "15.4"
 compat_features:
   - css.types.acos
   - css.types.asin

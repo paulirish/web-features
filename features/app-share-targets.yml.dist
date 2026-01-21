@@ -7,11 +7,5 @@ status:
     chrome: "89"
     chrome_android: "76"
     edge: "89"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "89"
-      chrome_android: "76"
-      edge: "89"
 compat_features:
   - manifests.webapp.share_target

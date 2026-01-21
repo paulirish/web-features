@@ -8,13 +8,6 @@ status:
     edge: "93"
     firefox: "92"
     firefox_android: "92"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "93"
-      edge: "93"
-      firefox: "92"
-      firefox_android: "92"
 compat_features:
   - css.properties.accent-color
   - css.properties.accent-color.auto

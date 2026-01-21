@@ -12,16 +12,6 @@ status:
     firefox_android: "113"
     safari: "15.4"
     safari_ios: "15.4"
-  baselinen:
-    baseline: false
-    support:
-      chrome: "76"
-      chrome_android: "76"
-      edge: "79"
-      firefox: "113"
-      firefox_android: "113"
-      safari: "15.4"
-      safari_ios: "15.4"
 compat_features:
   - api.RTCPeerConnection.sctp
   - api.RTCSctpTransport
