@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers } from "./core-browser-set.js";
+import { browsers as getCoreBrowserSet } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -98,6 +98,7 @@ export function computeBaseline(
     checkAncestors?: boolean;
   },
   compat: Compat = defaultCompat,
+  browserSet?: Browser[],
 ): SupportDetails {
   // A cutoff date approximating "now" is needed to determine when a feature has
   // entered Baseline high. We use BCD's __meta.timestamp for this, but any
@@ -112,7 +113,9 @@ export function computeBaseline(
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
-  const statuses = keys.map((key) => calculate(key, compat));
+  const statuses = keys.map((key) =>
+    calculate(key, compat, browserSet ?? getCoreBrowserSet(compat)),
+  );
   const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
@@ -138,12 +141,16 @@ export function computeBaseline(
  * Compute the Baseline support ("high", "low" or false, dates, and releases)
  * for a single compat key.
  */
-function calculate(compatKey: string, compat: Compat) {
+function calculate(
+  compatKey: string,
+  compat: Compat,
+  browserSet: Browser[],
+) {
   const f = feature(compatKey);
 
   return {
     discouraged: f.deprecated ?? false,
-    support: support(f, browsers(compat)),
+    support: support(f, browserSet),
   };
 }
 

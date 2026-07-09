@@ -4,7 +4,8 @@ import { Temporal } from "@js-temporal/polyfill";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
-import { browser } from "../browser-compat-data/index.js";
+import { browser, defaultCompat } from "../browser-compat-data/index.js";
+import { browsers } from "./core-browser-set.js";
 import { computeBaseline, getStatus, keystoneDateToStatus } from "./index.js";
 
 chai.use(chaiJestSnapshot);
@@ -174,6 +175,21 @@ describe("computeBaseline", function () {
       checkAncestors: false,
     });
     assert.equal(actual.baseline, false);
+  });
+
+  it("computes a custom baseline", () => {
+    const browserSet = new Set(browsers(defaultCompat));
+    browserSet.add(browser("nodejs"));
+    const result = computeBaseline(
+      {
+        compatKeys: ["javascript.operators.async_function"],
+        checkAncestors: false,
+      },
+      defaultCompat,
+      [...browserSet],
+    );
+    assert.equal(result.baseline, "high");
+    assert(result.support.has(browser("nodejs")));
   });
 });
 

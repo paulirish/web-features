@@ -66,9 +66,18 @@ interface Status {
     };
 }
 
+interface NodeSupportStatus extends Status {
+    /** Browser versions that most-recently introduced the feature */
+    support: {
+        [K in BrowserIdentifier | "nodejs"]?: string;
+    };
+}
+
 interface SupportStatus extends Status {
     /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
     by_compat_key?: Record<string, Status>
+    /** Baseline status including Node.js */
+    baselinen?: NodeSupportStatus;
 }
 
 interface Discouraged {
