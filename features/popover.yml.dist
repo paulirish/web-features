@@ -82,8 +82,7 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.HTMLElement.showPopover.source
-  - api.HTMLElement.togglePopover.source
+  #   firefox: "141"
+  #   firefox_android: "141"
+  - api.HTMLElement.showPopover.options_source_parameter
+  - api.HTMLElement.togglePopover.options_source_parameter
