@@ -1,7 +1,6 @@
 import {
   FlagStatement,
   SimpleSupportStatement,
-  VersionValue,
 } from "@mdn/browser-compat-data";
 
 import { Browser } from "./browser.js";
@@ -19,45 +18,13 @@ export type Supported = { supported: true; qualifications?: Qualifications };
 export type Unsupported = { supported: false };
 export type UnknownSupport = { supported: null };
 
-export function statement(
-  incoming:
-    | Partial<SimpleSupportStatement>
-    | SupportStatement
-    | RealSupportStatement,
-  browser?: Browser,
-  feature?: Feature,
-): SupportStatement {
-  if (incoming instanceof RealSupportStatement) {
-    return incoming;
-  }
-
-  if (incoming instanceof SupportStatement) {
-    return statement(incoming.data, browser, feature);
-  }
-
-  try {
-    return new RealSupportStatement(incoming, browser, feature);
-  } catch (err) {
-    if (err instanceof NonRealValueError) {
-      return new SupportStatement(incoming, browser, feature);
-    }
-    throw err;
-  }
-}
-
-export class NonRealValueError extends Error {
-  constructor(name: "version_added" | "version_removed", value: unknown) {
-    super(`${name} of ${value} is not a BCD real value`);
-  }
-}
-
 export class SupportStatement {
-  data: Partial<SimpleSupportStatement>;
+  data: SimpleSupportStatement;
   browser: Browser | undefined;
   feature: Feature | undefined;
 
   constructor(
-    data: Partial<SimpleSupportStatement>,
+    data: SimpleSupportStatement,
     browser?: Browser,
     feature?: Feature,
   ) {
@@ -66,90 +33,42 @@ export class SupportStatement {
     this.feature = feature;
   }
 
+  /**
+   * An array of `FlagStatement` objects. If there are no flags, then the array
+   * is empty.
+   */
   get flags(): FlagStatement[] {
     return this.data?.flags ?? [];
   }
 
+  /**
+   * A `true` value when evidence of support exists, such an API exposure, but
+   * its behavior is irregular (for example, by deviating from the
+   * specification). Otherwise, `false`.
+   */
   get partial_implementation(): boolean {
-    // Strictness guarantee: unset partial_implementation returns false
     return this.data?.partial_implementation ?? false;
   }
 
   /**
-   * Get the `version_added` value, or false if unset.
+   * A version string for the first supporting release. If the feature was never
+   * supported, then it is `false`.
    */
-  get version_added(): VersionValue {
+  get version_added(): string | boolean | null {
     if (this.data?.version_added === undefined) {
       return false;
     }
-    return this.data?.version_added;
-  }
-
-  get version_removed(): string | boolean | undefined {
-    const value = this.data?.version_removed;
-
-    // TODO: Report and fix upstream bug in BCD, then uncomment or drop the code
-    // below
-
-    // According to @mdn/browser-compat-data's schema, `version_removed` values
-    // should only be `true` or strings. In practice (and according to the
-    // exported types), this is not the case, because mirroring inserts `false`
-    // values.
-
-    // if (value === null || value === false) {
-    //   throw new Error(
-    //     "`version_added` should never be `null` or `false`. This is a bug, so please file an issue!",
-    //   );
-    // }
-    if (value === null) {
-      throw new Error(
-        "`version_added` should never be `null`. This is a bug, so please file an issue!",
-      );
-    }
-
-    return value;
-  }
-}
-
-export class RealSupportStatement extends SupportStatement {
-  constructor(
-    data: Partial<SimpleSupportStatement>,
-    browser?: Browser,
-    feature?: Feature,
-  ) {
-    // Strictness guarantee: Support statements never contain non-real values
-
-    super(data, browser, feature);
-
-    if (!Object.hasOwn(data, "version_added")) {
-      throw new Error("version_added missing from simple support statement");
-    }
-
-    const { version_added } = data;
-    if (!(typeof version_added === "string" || version_added === false)) {
-      throw new NonRealValueError("version_added", version_added);
-    }
-
-    if (Object.hasOwn(data, "version_removed")) {
-      const { version_removed } = data;
-      if (!(typeof version_removed === "string" || version_removed === false)) {
-        throw new NonRealValueError("version_added", version_removed);
-      }
-    }
-  }
-
-  get version_added(): string | false {
-    return super.version_added as string | false;
-  }
-
-  get version_removed(): string | false | undefined {
-    return super.version_removed as string | false | undefined;
+    return this.data.version_added;
   }
 
   /**
-   * Find out whether this support statement says a given browser release is
-   * supported (with or without qualifications), unsupported, or unknown.
+   * A version string for the first unsupporting release after `version_added`.
+   * If the feature is still supported, then it is `undefined`.
    */
+  get version_removed(): string | boolean | undefined {
+    return this.data?.version_removed;
+  }
+
   supportedInDetails(
     release: Release,
   ): Supported | Unsupported | UnknownSupport {
@@ -167,6 +86,12 @@ export class RealSupportStatement extends SupportStatement {
       return { supported: false };
     }
 
+    if (this.version_added === true || this.version_added === null) {
+      return { supported: null };
+    }
+
+    const versionAddedStr = this.version_added;
+
     // From here, some releases might be supporting
     const qualifications = statementToQualifications(this);
     const asSupported = Boolean(Object.keys(qualifications).length)
@@ -175,20 +100,15 @@ export class RealSupportStatement extends SupportStatement {
 
     // Let's deal with the most fiendish case first:
     // { version_added: "≤", version_removed: "≤…" }
-    // That is, a case where unknown values are in two version ranges:
-    // - Supported in version_added
-    // - Unsupported from version_removed
-    // - Unknown before version_added
-    // - Unknown from version_added + 1 to removed (exclusive)
     if (
-      isRangedVersion(this.version_added) &&
+      isRangedVersion(versionAddedStr) &&
       isRangedVersion(this.version_removed)
     ) {
       const supportedIn = this.browser.version(
-        this.version_added.replaceAll("≤", ""),
+        versionAddedStr.replaceAll("≤", ""),
       ) as Release;
       const unsupportedFrom = this.browser.version(
-        this.version_removed.replaceAll("≤", ""),
+        (this.version_removed as string).replaceAll("≤", ""),
       ) as Release;
 
       if (release === supportedIn) {
@@ -204,18 +124,13 @@ export class RealSupportStatement extends SupportStatement {
 
     // The other fiendish case is:
     // { version_added: "…", version_removed: "≤…" }
-    // That is, cases such that:
-    // - Supported in version_added
-    // - Unsupported before version_added
-    // - Unsupported from version_removed
-    // - Unknown from version_added + 1 to removed (exclusive)
     if (
-      isFixedVersion(this.version_added) &&
+      isFixedVersion(versionAddedStr) &&
       isRangedVersion(this.version_removed)
     ) {
-      const supportedIn = this.browser.version(this.version_added);
+      const supportedIn = this.browser.version(versionAddedStr);
       const unsupportedFrom = this.browser.version(
-        this.version_removed.replaceAll("≤", ""),
+        (this.version_removed as string).replaceAll("≤", ""),
       ) as Release;
 
       if (release === supportedIn) {
@@ -230,13 +145,17 @@ export class RealSupportStatement extends SupportStatement {
       return { supported: null };
     }
 
-    const start = this.browser.version(this.version_added.replaceAll("≤", ""));
-    const startRanged = isRangedVersion(this.version_added);
+    const start = this.browser.version(versionAddedStr.replaceAll("≤", ""));
+    const startRanged = isRangedVersion(versionAddedStr);
 
-    const end: Release | undefined =
-      typeof this.version_removed === "string"
-        ? this.browser.version(this.version_removed)
-        : undefined;
+    let end: Release | undefined;
+    if (typeof this.version_removed === "string") {
+      end = this.browser.version(this.version_removed.replaceAll("≤", ""));
+    } else if (this.version_removed === true) {
+      if (release.inRange(start)) {
+        return { supported: null };
+      }
+    }
 
     if (release.inRange(start, end)) {
       return asSupported;
@@ -252,24 +171,38 @@ export class RealSupportStatement extends SupportStatement {
       throw new Error("This support statement's browser is unknown.");
     }
 
-    if (this.version_added === false) {
+    if (
+      this.version_added === false ||
+      this.version_added === true ||
+      this.version_added === null
+    ) {
       return [];
     }
 
+    const versionAddedStr = this.version_added;
+
     let start: Release;
-    if (this.version_added.startsWith("≤")) {
-      start = this.browser.version(this.version_added.slice(1));
+    if (versionAddedStr.startsWith("≤")) {
+      start = this.browser.version(versionAddedStr.slice(1));
     } else {
-      start = this.browser.version(this.version_added);
+      start = this.browser.version(versionAddedStr);
     }
 
-    let releases;
-    if (this.version_removed === undefined || this.version_removed === false) {
-      releases = this.browser.releases.filter((rel) => rel.inRange(start));
-    } else {
-      const end: Release = this.browser.version(this.version_removed);
-      releases = this.browser.releases.filter((rel) => rel.inRange(start, end));
+    let end: Release | undefined;
+    if (typeof this.version_removed === "string") {
+      const versionRemovedStr = this.version_removed;
+      if (versionRemovedStr.startsWith("≤")) {
+        end = this.browser.version(versionRemovedStr.slice(1));
+      } else {
+        end = this.browser.version(versionRemovedStr);
+      }
+    } else if (this.version_removed === true) {
+      return [];
     }
+
+    let releases = this.browser.releases.filter((rel) =>
+      rel.inRange(start, end),
+    );
 
     let qualifications: Qualifications = statementToQualifications(this);
     if (Object.keys(qualifications).length) {
