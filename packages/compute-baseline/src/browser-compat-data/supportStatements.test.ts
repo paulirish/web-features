@@ -313,12 +313,24 @@ describe("statements", function () {
     describe("edge cases with boolean, null, and ranged values", function () {
       it("handles version_added true and null gracefully in supportedInDetails and supportedBy", function () {
         const cr = browser("chrome");
-        const addedTrue = new SupportStatement({ version_added: true as any }, cr);
-        const addedNull = new SupportStatement({ version_added: null as any }, cr);
+        const addedTrue = new SupportStatement(
+          { version_added: true as any },
+          cr,
+        );
+        const addedNull = new SupportStatement(
+          { version_added: null as any },
+          cr,
+        );
 
         // supportedInDetails returns { supported: null }
-        assert.equal(addedTrue.supportedInDetails(cr.current()).supported, null);
-        assert.equal(addedNull.supportedInDetails(cr.current()).supported, null);
+        assert.equal(
+          addedTrue.supportedInDetails(cr.current()).supported,
+          null,
+        );
+        assert.equal(
+          addedNull.supportedInDetails(cr.current()).supported,
+          null,
+        );
 
         // supportedBy returns []
         assert.deepEqual(addedTrue.supportedBy(), []);
@@ -327,11 +339,20 @@ describe("statements", function () {
 
       it("handles version_removed true gracefully in supportedInDetails and supportedBy", function () {
         const cr = browser("chrome");
-        const removedTrue = new SupportStatement({ version_added: "100", version_removed: true as any }, cr);
+        const removedTrue = new SupportStatement(
+          { version_added: "100", version_removed: true as any },
+          cr,
+        );
 
         // supportedInDetails returns { supported: null } for releases >= version_added
-        assert.equal(removedTrue.supportedInDetails(cr.version("100")).supported, null);
-        assert.equal(removedTrue.supportedInDetails(cr.version("99")).supported, false);
+        assert.equal(
+          removedTrue.supportedInDetails(cr.version("100")).supported,
+          null,
+        );
+        assert.equal(
+          removedTrue.supportedInDetails(cr.version("99")).supported,
+          false,
+        );
 
         // supportedBy returns []
         assert.deepEqual(removedTrue.supportedBy(), []);
@@ -339,13 +360,16 @@ describe("statements", function () {
 
       it("handles ranged version_removed strings gracefully in supportedBy", function () {
         const cr = browser("chrome");
-        const rangedRemoved = new SupportStatement({ version_added: "100", version_removed: "≤125" }, cr);
+        const rangedRemoved = new SupportStatement(
+          { version_added: "100", version_removed: "≤125" },
+          cr,
+        );
 
         // supportedBy should not crash and should return the expected releases from start to end (exclusive)
         const rels = rangedRemoved.supportedBy();
         assert.ok(rels.length > 0);
         // Verify that the end version (125) is not included
-        assert.ok(!rels.some(r => r.release.version === "125"));
+        assert.ok(!rels.some((r) => r.release.version === "125"));
       });
     });
   });
