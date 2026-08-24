@@ -119,6 +119,25 @@ computeBaseline({
 });
 ```
 
+### Include JavaScript runtimes (Node.js, Deno, Bun) support in baseline calculation
+
+To include Node.js, Deno, or Bun in the support matrix and baseline calculation, pass the `runtimes` option (or `includeNode: true` for Node.js):
+
+```javascript
+import { computeBaseline, getStatus } from "compute-baseline";
+
+// Include runtimes in getStatus
+getStatus("fetch", "api.Response.json", {
+  runtimes: ["nodejs", "deno", "bun"],
+});
+
+// Include runtimes in computeBaseline
+computeBaseline({
+  compatKeys: ["javascript.builtins.Promise"],
+  runtimes: ["nodejs", "deno", "bun"],
+});
+```
+
 ### Bring your own compatibility data
 
 **Note**: This example returns support data that has not received an editorial review. Do not use for presenting a Baseline status. See [Limitations](#limitations).

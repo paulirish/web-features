@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers } from "./core-browser-set.js";
+import { browsers, BrowserOptions, Runtime } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -76,13 +76,46 @@ interface SupportStatus {
 export function getStatus(
   featureId: string,
   compatKey: string,
-  compat: Compat = defaultCompat,
+  compat?: Compat,
+  options?: BrowserOptions,
+): SupportStatus;
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  options?: BrowserOptions,
+  compat?: Compat,
+): SupportStatus;
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  compatOrOptions?: Compat | BrowserOptions,
+  optionsOrCompat?: BrowserOptions | Compat,
 ): SupportStatus {
+  let compat = defaultCompat;
+  let opts: BrowserOptions | undefined;
+
+  if (compatOrOptions instanceof Compat) {
+    compat = compatOrOptions;
+    if (optionsOrCompat && !(optionsOrCompat instanceof Compat)) {
+      opts = optionsOrCompat;
+    }
+  } else if (compatOrOptions && typeof compatOrOptions === "object") {
+    opts = compatOrOptions;
+    if (optionsOrCompat instanceof Compat) {
+      compat = optionsOrCompat;
+    }
+  }
+
   // TODO: actually check that featureId is a valid feature
   // TODO: actually check that compatKey is tagged as featureId in BCD _or_ listed in web-features
   return JSON.parse(
     computeBaseline(
-      { compatKeys: [compatKey], checkAncestors: true },
+      {
+        compatKeys: [compatKey],
+        checkAncestors: true,
+        includeNode: opts?.includeNode,
+        runtimes: opts?.runtimes,
+      },
       compat,
     ).toJSON(),
   );
@@ -96,6 +129,8 @@ export function computeBaseline(
   featureSelector: {
     compatKeys: string[];
     checkAncestors?: boolean;
+    includeNode?: boolean;
+    runtimes?: Runtime[];
   },
   compat: Compat = defaultCompat,
 ): SupportDetails {
@@ -107,12 +142,14 @@ export function computeBaseline(
     .toZonedDateTimeISO("UTC")
     .toPlainDate();
 
-  const { compatKeys } = featureSelector;
+  const { compatKeys, includeNode, runtimes } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
-  const statuses = keys.map((key) => calculate(key, compat));
+  const statuses = keys.map((key) =>
+    calculate(key, compat, { includeNode, runtimes }),
+  );
   const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
@@ -138,12 +175,16 @@ export function computeBaseline(
  * Compute the Baseline support ("high", "low" or false, dates, and releases)
  * for a single compat key.
  */
-function calculate(compatKey: string, compat: Compat) {
+function calculate(
+  compatKey: string,
+  compat: Compat,
+  options?: BrowserOptions,
+) {
   const f = feature(compatKey);
 
   return {
     discouraged: f.deprecated ?? false,
-    support: support(f, browsers(compat)),
+    support: support(f, browsers(compat, options)),
   };
 }
 

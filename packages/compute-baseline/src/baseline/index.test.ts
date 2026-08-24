@@ -23,6 +23,26 @@ describe("getStatus", function () {
     assert.equal(result.baseline, "high");
     chai.expect(result).to.matchSnapshot();
   });
+
+  it("includes nodejs when includeNode is true", function () {
+    const defaultResult = getStatus("fetch", "api.Response.json");
+    assert.equal(defaultResult.support.nodejs, undefined);
+
+    const resultWithNode = getStatus("fetch", "api.Response.json", {
+      includeNode: true,
+    });
+    assert.equal(resultWithNode.baseline, "high");
+    assert.equal(typeof resultWithNode.support.nodejs, "string");
+  });
+
+  it("includes specified runtimes when runtimes option is used", function () {
+    const resultWithRuntimes = getStatus("fetch", "api.Response.json", {
+      runtimes: ["nodejs", "deno", "bun"],
+    });
+    assert.equal(typeof resultWithRuntimes.support.nodejs, "string");
+    assert.equal(typeof resultWithRuntimes.support.deno, "string");
+    assert.equal(typeof resultWithRuntimes.support.bun, "string");
+  });
 });
 
 describe("computeBaseline", function () {
@@ -183,6 +203,56 @@ describe("computeBaseline", function () {
     });
     assert.equal(actual.baseline, false);
     assert.equal(actual.support.size, 0);
+  });
+
+  it("includes nodejs in support map when includeNode is true", function () {
+    const defaultResult = computeBaseline({
+      compatKeys: ["javascript.builtins.Promise"],
+    });
+    assert.equal(defaultResult.support.has(browser("nodejs")), false);
+
+    const withNodeResult = computeBaseline({
+      compatKeys: ["javascript.builtins.Promise"],
+      includeNode: true,
+    });
+    assert.equal(withNodeResult.support.has(browser("nodejs")), true);
+    assert.notEqual(withNodeResult.support.get(browser("nodejs")), undefined);
+    assert.equal(
+      JSON.parse(withNodeResult.toJSON()).support.nodejs,
+      withNodeResult.support.get(browser("nodejs"))?.text,
+    );
+  });
+
+  it("affects baseline status calculation when nodejs lacks support", function () {
+    const defaultResult = computeBaseline({
+      compatKeys: ["css.properties.border-color"],
+      checkAncestors: false,
+    });
+    assert.equal(defaultResult.baseline, "high");
+
+    const withNodeResult = computeBaseline({
+      compatKeys: ["css.properties.border-color"],
+      checkAncestors: false,
+      includeNode: true,
+    });
+    assert.equal(withNodeResult.baseline, false);
+    assert.equal(withNodeResult.support.get(browser("nodejs")), undefined);
+  });
+
+  it("includes deno and bun in support map when runtimes option is specified", function () {
+    const result = computeBaseline({
+      compatKeys: ["javascript.builtins.Promise"],
+      runtimes: ["deno", "bun"],
+    });
+    assert.equal(result.support.has(browser("deno")), true);
+    assert.equal(result.support.has(browser("bun")), true);
+    assert.equal(result.support.has(browser("nodejs")), false);
+    assert.notEqual(result.support.get(browser("deno")), undefined);
+    assert.notEqual(result.support.get(browser("bun")), undefined);
+
+    const json = JSON.parse(result.toJSON());
+    assert.equal(typeof json.support.deno, "string");
+    assert.equal(typeof json.support.bun, "string");
   });
 });
 

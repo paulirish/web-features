@@ -84,7 +84,7 @@ export class Feature {
 
     const statementOrStatements = support[browser.id];
     if (statementOrStatements === undefined) {
-      throw new Error(`${this} contains no support data for ${browser.name}`);
+      return [];
     }
 
     return Array.isArray(statementOrStatements)
