@@ -10,6 +10,7 @@ export const identifiers = [
   "safari_ios",
 ];
 
-export function browsers(compat: Compat) {
-  return identifiers.map((b) => compat.browser(b));
+export function browsers(compat: Compat, options?: { includeNode?: boolean }) {
+  const ids = options?.includeNode ? [...identifiers, "nodejs"] : identifiers;
+  return ids.map((b) => compat.browser(b));
 }

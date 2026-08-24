@@ -76,13 +76,45 @@ interface SupportStatus {
 export function getStatus(
   featureId: string,
   compatKey: string,
-  compat: Compat = defaultCompat,
+  compat?: Compat,
+  options?: { includeNode?: boolean },
+): SupportStatus;
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  options?: { includeNode?: boolean },
+  compat?: Compat,
+): SupportStatus;
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  compatOrOptions?: Compat | { includeNode?: boolean },
+  optionsOrCompat?: { includeNode?: boolean } | Compat,
 ): SupportStatus {
+  let compat = defaultCompat;
+  let opts: { includeNode?: boolean } | undefined;
+
+  if (compatOrOptions instanceof Compat) {
+    compat = compatOrOptions;
+    if (optionsOrCompat && !(optionsOrCompat instanceof Compat)) {
+      opts = optionsOrCompat;
+    }
+  } else if (compatOrOptions && typeof compatOrOptions === "object") {
+    opts = compatOrOptions;
+    if (optionsOrCompat instanceof Compat) {
+      compat = optionsOrCompat;
+    }
+  }
+
   // TODO: actually check that featureId is a valid feature
   // TODO: actually check that compatKey is tagged as featureId in BCD _or_ listed in web-features
   return JSON.parse(
     computeBaseline(
-      { compatKeys: [compatKey], checkAncestors: true },
+      {
+        compatKeys: [compatKey],
+        checkAncestors: true,
+        includeNode: opts?.includeNode,
+      },
       compat,
     ).toJSON(),
   );
@@ -96,6 +128,7 @@ export function computeBaseline(
   featureSelector: {
     compatKeys: string[];
     checkAncestors?: boolean;
+    includeNode?: boolean;
   },
   compat: Compat = defaultCompat,
 ): SupportDetails {
@@ -107,12 +140,14 @@ export function computeBaseline(
     .toZonedDateTimeISO("UTC")
     .toPlainDate();
 
-  const { compatKeys } = featureSelector;
+  const { compatKeys, includeNode } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
-  const statuses = keys.map((key) => calculate(key, compat));
+  const statuses = keys.map((key) =>
+    calculate(key, compat, { includeNode }),
+  );
   const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
@@ -138,12 +173,16 @@ export function computeBaseline(
  * Compute the Baseline support ("high", "low" or false, dates, and releases)
  * for a single compat key.
  */
-function calculate(compatKey: string, compat: Compat) {
+function calculate(
+  compatKey: string,
+  compat: Compat,
+  options?: { includeNode?: boolean },
+) {
   const f = feature(compatKey);
 
   return {
     discouraged: f.deprecated ?? false,
-    support: support(f, browsers(compat)),
+    support: support(f, browsers(compat, options)),
   };
 }
 

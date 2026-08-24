@@ -119,6 +119,23 @@ computeBaseline({
 });
 ```
 
+### Include Node.js support in baseline calculation
+
+To include Node.js in the support matrix and baseline calculation, pass the `includeNode` option set to `true`:
+
+```javascript
+import { computeBaseline, getStatus } from "compute-baseline";
+
+// Include Node.js in getStatus
+getStatus("fetch", "api.Response.json", { includeNode: true });
+
+// Include Node.js in computeBaseline
+computeBaseline({
+  compatKeys: ["javascript.builtins.Promise"],
+  includeNode: true,
+});
+```
+
 ### Bring your own compatibility data
 
 **Note**: This example returns support data that has not received an editorial review. Do not use for presenting a Baseline status. See [Limitations](#limitations).
