@@ -38,6 +38,47 @@ Run:
 
 ## Usage
 
+### Check Baseline status with `baselineStatus`
+
+The `baselineStatus` function provides a unified method to query Baseline status for a feature ID, a BCD ID (`bcdId`), an array of IDs, or an options object:
+
+```javascript
+import { baselineStatus } from "compute-baseline";
+
+// Query by feature ID
+baselineStatus("flexbox");
+
+// Query by BCD ID
+baselineStatus("api.Response.json");
+
+// Query multiple feature IDs or BCD IDs
+baselineStatus(["flexbox", "api.Response.json"]);
+
+// Using options object
+baselineStatus({ feature: "flexbox" });
+baselineStatus({ bcdId: "api.Response.json" });
+```
+
+Returns:
+
+```javascript
+{
+  baseline: 'widely', // 'widely', 'newly', or false
+  baseline_low_date: '2017-03-27',
+  baseline_high_date: '2019-09-27',
+  discouraged: false,
+  support: {
+    chrome: '42',
+    chrome_android: '42',
+    edge: '14',
+    firefox: '39',
+    firefox_android: '39',
+    safari: '10.1',
+    safari_ios: '10.3'
+  }
+}
+```
+
 ### Get a Baseline status for a portion of a feature
 
 To get a Baseline status for a specific browser compatibility data entry within a `web-features` feature, call `getStatus` with the web feature's ID and the BCD feature key as parameters, as shown below:

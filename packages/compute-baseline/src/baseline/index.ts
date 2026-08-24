@@ -43,6 +43,37 @@ export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
 type BaselineStatus = "low" | "high" | false;
 type BaselineDate = string | null;
 
+export type BaselineStatusValue = "widely" | "newly" | false;
+
+export interface BaselineStatusResult {
+  baseline: BaselineStatusValue;
+  baseline_low_date: string | null;
+  baseline_high_date: string | null;
+  discouraged: boolean;
+  support: Record<string, string>;
+}
+
+export type BaselineStatusOptions = {
+  feature?: string | string[];
+  featureId?: string | string[];
+  bcdId?: string | string[];
+  compatKey?: string | string[];
+  checkAncestors?: boolean;
+  compat?: Compat;
+  featuresData?: Record<string, any>;
+};
+
+export type BaselineStatusInput =
+  | string
+  | string[]
+  | BaselineStatusOptions;
+
+let registeredFeatures: Record<string, any> | undefined;
+
+export function setDefaultFeatures(featuresData: Record<string, any>) {
+  registeredFeatures = featuresData;
+}
+
 interface SupportDetails {
   compatKey?: string;
   baseline: BaselineStatus;
@@ -86,6 +117,188 @@ export function getStatus(
       compat,
     ).toJSON(),
   );
+}
+
+function isBcdKey(key: string, compat: Compat): boolean {
+  try {
+    const data = compat.query(key);
+    return typeof data === "object" && data !== null && "__compat" in data;
+  } catch {
+    return false;
+  }
+}
+
+function resolveFeatureIdToBcdKeys(
+  featureId: string,
+  featuresData: Record<string, any>,
+): string[] {
+  const feat = featuresData[featureId];
+  if (!feat) {
+    return [];
+  }
+  if (feat.kind === "moved" && feat.redirect_target) {
+    return resolveFeatureIdToBcdKeys(feat.redirect_target, featuresData);
+  }
+  if (feat.kind === "split" && Array.isArray(feat.redirect_targets)) {
+    return feat.redirect_targets.flatMap((t: string) =>
+      resolveFeatureIdToBcdKeys(t, featuresData),
+    );
+  }
+  if (feat.status?.compute_from) {
+    const cf = feat.status.compute_from;
+    return Array.isArray(cf) ? cf : [cf];
+  }
+  if (Array.isArray(feat.compat_features) && feat.compat_features.length > 0) {
+    return feat.compat_features;
+  }
+  return [];
+}
+
+/**
+ * Compute the Baseline status for a web feature ID, a BCD ID, or a combination/options object.
+ *
+ * Accepts flexible inputs (feature ID string, BCD ID string `bcdId`, array of strings, or options object).
+ */
+export function baselineStatus(
+  input: BaselineStatusInput,
+  compatOverride?: Compat,
+): BaselineStatusResult {
+  let compat = compatOverride;
+  let checkAncestorsExplicit: boolean | undefined;
+  let featuresData = registeredFeatures;
+
+  const rawFeatureInputs: string[] = [];
+  const rawBcdInputs: string[] = [];
+
+  const toArray = (val: string | string[] | undefined): string[] => {
+    if (!val) return [];
+    return Array.isArray(val) ? val : [val];
+  };
+
+  if (typeof input === "string") {
+    rawFeatureInputs.push(input);
+  } else if (Array.isArray(input)) {
+    rawFeatureInputs.push(...input);
+  } else if (typeof input === "object" && input !== null) {
+    if (input.compat) compat = input.compat;
+    if (input.checkAncestors !== undefined) {
+      checkAncestorsExplicit = input.checkAncestors;
+    }
+    if (input.featuresData) featuresData = input.featuresData;
+
+    rawFeatureInputs.push(...toArray(input.feature));
+    rawFeatureInputs.push(...toArray(input.featureId));
+
+    rawBcdInputs.push(...toArray(input.bcdId));
+    rawBcdInputs.push(...toArray(input.compatKey));
+  } else {
+    throw new TypeError("Invalid input provided to baselineStatus");
+  }
+
+  const effectiveCompat = compat ?? defaultCompat;
+  const resolvedBcdKeys: string[] = [];
+  let userProvidedBcdDirectly = rawBcdInputs.length > 0;
+
+  for (const item of rawBcdInputs) {
+    if (!isBcdKey(item, effectiveCompat)) {
+      throw new Error(`Invalid BCD ID: "${item}"`);
+    }
+    resolvedBcdKeys.push(item);
+  }
+
+  // If single feature ID requested and no direct BCD inputs or checkAncestors override:
+  if (
+    rawFeatureInputs.length === 1 &&
+    rawBcdInputs.length === 0 &&
+    checkAncestorsExplicit === undefined &&
+    featuresData
+  ) {
+    const singleItem = rawFeatureInputs[0]!;
+    if (!isBcdKey(singleItem, effectiveCompat) && singleItem in featuresData) {
+      let feat = featuresData[singleItem];
+      while (feat && (feat.kind === "moved" || feat.kind === "split")) {
+        if (feat.kind === "moved" && feat.redirect_target) {
+          feat = featuresData[feat.redirect_target];
+        } else if (
+          feat.kind === "split" &&
+          Array.isArray(feat.redirect_targets) &&
+          feat.redirect_targets.length > 0
+        ) {
+          feat = featuresData[feat.redirect_targets[0]];
+        } else {
+          break;
+        }
+      }
+
+      if (feat && feat.status) {
+        let baseline: BaselineStatusValue = false;
+        if (feat.status.baseline === "high") {
+          baseline = "widely";
+        } else if (feat.status.baseline === "low") {
+          baseline = "newly";
+        }
+
+        return {
+          baseline,
+          baseline_low_date: feat.status.baseline_low_date ?? null,
+          baseline_high_date: feat.status.baseline_high_date ?? null,
+          discouraged: Boolean(feat.discouraged),
+          support: feat.status.support ?? {},
+        };
+      }
+    }
+  }
+
+  for (const item of rawFeatureInputs) {
+    if (isBcdKey(item, effectiveCompat)) {
+      resolvedBcdKeys.push(item);
+      userProvidedBcdDirectly = true;
+      continue;
+    }
+
+    if (featuresData && item in featuresData) {
+      const bcdKeys = resolveFeatureIdToBcdKeys(item, featuresData);
+      resolvedBcdKeys.push(...bcdKeys);
+      continue;
+    }
+
+    throw new Error(`Unknown feature ID or BCD ID: "${item}"`);
+  }
+
+  if (resolvedBcdKeys.length === 0) {
+    throw new Error("No valid feature IDs or BCD IDs specified.");
+  }
+
+  const checkAncestors =
+    checkAncestorsExplicit ??
+    (userProvidedBcdDirectly && resolvedBcdKeys.length === 1);
+
+  const supportDetails = computeBaseline(
+    { compatKeys: resolvedBcdKeys, checkAncestors },
+    effectiveCompat,
+  );
+
+  let baseline: BaselineStatusValue = false;
+  if (supportDetails.baseline === "high") {
+    baseline = "widely";
+  } else if (supportDetails.baseline === "low") {
+    baseline = "newly";
+  }
+
+  const supportRecord: Record<string, string> = {};
+  for (const [browser, initialSupport] of supportDetails.support.entries()) {
+    if (initialSupport !== undefined) {
+      supportRecord[browser.id] = initialSupport.text;
+    }
+  }
+
+  return {
+    baseline,
+    baseline_low_date: supportDetails.baseline_low_date,
+    baseline_high_date: supportDetails.baseline_high_date,
+    discouraged: supportDetails.discouraged,
+    support: supportRecord,
+  };
 }
 
 /**

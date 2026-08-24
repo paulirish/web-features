@@ -11,7 +11,10 @@ npm install web-features
 ```
 
 ```js
-import { browsers, features, groups, snapshots } from "web-features";
+import { baselineStatus, browsers, features, groups, snapshots } from "web-features";
+
+// Look up Baseline status for a feature ID or BCD ID
+const status = baselineStatus("flexbox");
 ```
 
 Or, without Node.js:

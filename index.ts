@@ -7,7 +7,7 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text.ts";
 import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, baselineStatus as computeBaselineStatus, coreBrowserSet, getStatus, parseRangedDateString, setDefaultFeatures } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
 import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions.ts';
 import { parseAuthoring, type ParsedAuthoredData } from './parse.ts';
@@ -288,6 +288,15 @@ for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier
         name,
         releases,
     }
+}
+
+setDefaultFeatures(features);
+
+export function baselineStatus(
+  input: Parameters<typeof computeBaselineStatus>[0],
+  compat?: Parameters<typeof computeBaselineStatus>[1],
+) {
+  return computeBaselineStatus(input, compat);
 }
 
 export { browsers, features, groups, snapshots };
