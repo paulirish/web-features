@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers } from "./core-browser-set.js";
+import { browsers, BrowserOptions, Runtime } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -77,22 +77,22 @@ export function getStatus(
   featureId: string,
   compatKey: string,
   compat?: Compat,
-  options?: { includeNode?: boolean },
+  options?: BrowserOptions,
 ): SupportStatus;
 export function getStatus(
   featureId: string,
   compatKey: string,
-  options?: { includeNode?: boolean },
+  options?: BrowserOptions,
   compat?: Compat,
 ): SupportStatus;
 export function getStatus(
   featureId: string,
   compatKey: string,
-  compatOrOptions?: Compat | { includeNode?: boolean },
-  optionsOrCompat?: { includeNode?: boolean } | Compat,
+  compatOrOptions?: Compat | BrowserOptions,
+  optionsOrCompat?: BrowserOptions | Compat,
 ): SupportStatus {
   let compat = defaultCompat;
-  let opts: { includeNode?: boolean } | undefined;
+  let opts: BrowserOptions | undefined;
 
   if (compatOrOptions instanceof Compat) {
     compat = compatOrOptions;
@@ -114,6 +114,7 @@ export function getStatus(
         compatKeys: [compatKey],
         checkAncestors: true,
         includeNode: opts?.includeNode,
+        runtimes: opts?.runtimes,
       },
       compat,
     ).toJSON(),
@@ -129,6 +130,7 @@ export function computeBaseline(
     compatKeys: string[];
     checkAncestors?: boolean;
     includeNode?: boolean;
+    runtimes?: Runtime[];
   },
   compat: Compat = defaultCompat,
 ): SupportDetails {
@@ -140,13 +142,13 @@ export function computeBaseline(
     .toZonedDateTimeISO("UTC")
     .toPlainDate();
 
-  const { compatKeys, includeNode } = featureSelector;
+  const { compatKeys, includeNode, runtimes } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
   const statuses = keys.map((key) =>
-    calculate(key, compat, { includeNode }),
+    calculate(key, compat, { includeNode, runtimes }),
   );
   const support = collateSupport(statuses.map((status) => status.support));
 
@@ -176,7 +178,7 @@ export function computeBaseline(
 function calculate(
   compatKey: string,
   compat: Compat,
-  options?: { includeNode?: boolean },
+  options?: BrowserOptions,
 ) {
   const f = feature(compatKey);
 

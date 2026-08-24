@@ -10,7 +10,23 @@ export const identifiers = [
   "safari_ios",
 ];
 
-export function browsers(compat: Compat, options?: { includeNode?: boolean }) {
-  const ids = options?.includeNode ? [...identifiers, "nodejs"] : identifiers;
+export type Runtime = "nodejs" | "deno" | "bun";
+
+export interface BrowserOptions {
+  includeNode?: boolean;
+  runtimes?: Runtime[];
+}
+
+export function browsers(compat: Compat, options?: BrowserOptions) {
+  const runtimeSet = new Set<string>();
+  if (options?.includeNode) {
+    runtimeSet.add("nodejs");
+  }
+  if (options?.runtimes) {
+    for (const r of options.runtimes) {
+      runtimeSet.add(r);
+    }
+  }
+  const ids = [...identifiers, ...runtimeSet];
   return ids.map((b) => compat.browser(b));
 }
