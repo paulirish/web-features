@@ -12,21 +12,12 @@ export const identifiers = [
 
 export type Runtime = "nodejs" | "deno" | "bun";
 
-export interface BrowserOptions {
-  includeNode?: boolean;
-  runtimes?: Runtime[];
+export interface RuntimeOptions {
+  runtimes?: readonly Runtime[];
 }
 
-export function browsers(compat: Compat, options?: BrowserOptions) {
-  const runtimeSet = new Set<string>();
-  if (options?.includeNode) {
-    runtimeSet.add("nodejs");
-  }
-  if (options?.runtimes) {
-    for (const r of options.runtimes) {
-      runtimeSet.add(r);
-    }
-  }
+export function browsers(compat: Compat, options?: RuntimeOptions) {
+  const runtimeSet = new Set(options?.runtimes ?? []);
   const ids = [...identifiers, ...runtimeSet];
   return ids.map((b) => compat.browser(b));
 }
