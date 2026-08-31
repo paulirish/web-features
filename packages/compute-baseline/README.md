@@ -121,7 +121,7 @@ computeBaseline({
 
 ### Include JavaScript runtimes (Node.js, Deno, Bun) support in baseline calculation
 
-To include Node.js, Deno, or Bun in the support matrix and baseline calculation, pass the `runtimes` option (or `includeNode: true` for Node.js):
+To include Node.js, Deno, or Bun in the support matrix and baseline calculation, pass the `runtimes` option:
 
 ```javascript
 import { computeBaseline, getStatus } from "compute-baseline";

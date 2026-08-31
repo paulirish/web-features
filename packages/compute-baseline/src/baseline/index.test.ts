@@ -24,20 +24,21 @@ describe("getStatus", function () {
     chai.expect(result).to.matchSnapshot();
   });
 
-  it("includes nodejs when includeNode is true", function () {
+  it("includes nodejs when requested as a runtime", function () {
     const defaultResult = getStatus("fetch", "api.Response.json");
     assert.equal(defaultResult.support.nodejs, undefined);
 
     const resultWithNode = getStatus("fetch", "api.Response.json", {
-      includeNode: true,
+      runtimes: ["nodejs"],
     });
     assert.equal(resultWithNode.baseline, "high");
     assert.equal(typeof resultWithNode.support.nodejs, "string");
   });
 
   it("includes specified runtimes when runtimes option is used", function () {
+    const runtimes = ["nodejs", "deno", "bun"] as const;
     const resultWithRuntimes = getStatus("fetch", "api.Response.json", {
-      runtimes: ["nodejs", "deno", "bun"],
+      runtimes,
     });
     assert.equal(typeof resultWithRuntimes.support.nodejs, "string");
     assert.equal(typeof resultWithRuntimes.support.deno, "string");
@@ -205,7 +206,7 @@ describe("computeBaseline", function () {
     assert.equal(actual.support.size, 0);
   });
 
-  it("includes nodejs in support map when includeNode is true", function () {
+  it("includes nodejs in support map when requested as a runtime", function () {
     const defaultResult = computeBaseline({
       compatKeys: ["javascript.builtins.Promise"],
     });
@@ -213,7 +214,7 @@ describe("computeBaseline", function () {
 
     const withNodeResult = computeBaseline({
       compatKeys: ["javascript.builtins.Promise"],
-      includeNode: true,
+      runtimes: ["nodejs"],
     });
     assert.equal(withNodeResult.support.has(browser("nodejs")), true);
     assert.notEqual(withNodeResult.support.get(browser("nodejs")), undefined);
@@ -233,16 +234,18 @@ describe("computeBaseline", function () {
     const withNodeResult = computeBaseline({
       compatKeys: ["css.properties.border-color"],
       checkAncestors: false,
-      includeNode: true,
+      runtimes: ["nodejs"],
     });
     assert.equal(withNodeResult.baseline, false);
     assert.equal(withNodeResult.support.get(browser("nodejs")), undefined);
   });
 
   it("includes deno and bun in support map when runtimes option is specified", function () {
+    const compatKeys = ["javascript.builtins.Promise"] as const;
+    const runtimes = ["deno", "bun"] as const;
     const result = computeBaseline({
-      compatKeys: ["javascript.builtins.Promise"],
-      runtimes: ["deno", "bun"],
+      compatKeys,
+      runtimes,
     });
     assert.equal(result.support.has(browser("deno")), true);
     assert.equal(result.support.has(browser("bun")), true);

@@ -2,7 +2,8 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers, BrowserOptions, Runtime } from "./core-browser-set.js";
+import { browsers, RuntimeOptions } from "./core-browser-set.js";
+export type { Runtime, RuntimeOptions } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -77,22 +78,22 @@ export function getStatus(
   featureId: string,
   compatKey: string,
   compat?: Compat,
-  options?: BrowserOptions,
+  options?: RuntimeOptions,
 ): SupportStatus;
 export function getStatus(
   featureId: string,
   compatKey: string,
-  options?: BrowserOptions,
+  options?: RuntimeOptions,
   compat?: Compat,
 ): SupportStatus;
 export function getStatus(
   featureId: string,
   compatKey: string,
-  compatOrOptions?: Compat | BrowserOptions,
-  optionsOrCompat?: BrowserOptions | Compat,
+  compatOrOptions?: Compat | RuntimeOptions,
+  optionsOrCompat?: RuntimeOptions | Compat,
 ): SupportStatus {
   let compat = defaultCompat;
-  let opts: BrowserOptions | undefined;
+  let opts: RuntimeOptions | undefined;
 
   if (compatOrOptions instanceof Compat) {
     compat = compatOrOptions;
@@ -113,7 +114,6 @@ export function getStatus(
       {
         compatKeys: [compatKey],
         checkAncestors: true,
-        includeNode: opts?.includeNode,
         runtimes: opts?.runtimes,
       },
       compat,
@@ -125,13 +125,13 @@ export function getStatus(
  * Given a set of compat keys, compute the aggregate Baseline support ("high",
  * "low" or false, dates, and releases) for those keys.
  */
+export interface ComputeBaselineOptions extends RuntimeOptions {
+  compatKeys: readonly string[];
+  checkAncestors?: boolean;
+}
+
 export function computeBaseline(
-  featureSelector: {
-    compatKeys: string[];
-    checkAncestors?: boolean;
-    includeNode?: boolean;
-    runtimes?: Runtime[];
-  },
+  featureSelector: ComputeBaselineOptions,
   compat: Compat = defaultCompat,
 ): SupportDetails {
   // A cutoff date approximating "now" is needed to determine when a feature has
@@ -142,13 +142,13 @@ export function computeBaseline(
     .toZonedDateTimeISO("UTC")
     .toPlainDate();
 
-  const { compatKeys, includeNode, runtimes } = featureSelector;
+  const { compatKeys, runtimes } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
   const statuses = keys.map((key) =>
-    calculate(key, compat, { includeNode, runtimes }),
+    calculate(key, compat, { runtimes }),
   );
   const support = collateSupport(statuses.map((status) => status.support));
 
@@ -178,7 +178,7 @@ export function computeBaseline(
 function calculate(
   compatKey: string,
   compat: Compat,
-  options?: BrowserOptions,
+  options?: RuntimeOptions,
 ) {
   const f = feature(compatKey);
 
