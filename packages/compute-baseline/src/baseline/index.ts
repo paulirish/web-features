@@ -55,7 +55,6 @@ export interface BaselineStatusResult {
 
 export type BaselineStatusOptions = {
   feature?: string | string[];
-  featureId?: string | string[];
   bcdId?: string | string[];
   compatKey?: string | string[];
   checkAncestors?: boolean;
@@ -161,9 +160,8 @@ function resolveFeatureIdToBcdKeys(
  */
 export function baselineStatus(
   input: BaselineStatusInput,
-  compatOverride?: Compat,
 ): BaselineStatusResult {
-  let compat = compatOverride;
+  let compat: Compat | undefined;
   let checkAncestorsExplicit: boolean | undefined;
   let featuresData = registeredFeatures;
 
@@ -187,7 +185,6 @@ export function baselineStatus(
     if (input.featuresData) featuresData = input.featuresData;
 
     rawFeatureInputs.push(...toArray(input.feature));
-    rawFeatureInputs.push(...toArray(input.featureId));
 
     rawBcdInputs.push(...toArray(input.bcdId));
     rawBcdInputs.push(...toArray(input.compatKey));

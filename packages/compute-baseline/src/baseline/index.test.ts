@@ -72,12 +72,9 @@ describe("baselineStatus", function () {
     assert.equal(res2.baseline, "widely");
   });
 
-  it("accepts options object with feature / featureId", function () {
+  it("accepts options object with feature", function () {
     const res1 = baselineStatus({ feature: "flexbox" });
-    const res2 = baselineStatus({ featureId: "flexbox" });
-
     assert.equal(res1.baseline, "widely");
-    assert.equal(res2.baseline, "widely");
   });
 
   it("accepts custom featuresData in options object", function () {

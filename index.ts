@@ -294,9 +294,8 @@ setDefaultFeatures(features);
 
 export function baselineStatus(
   input: Parameters<typeof computeBaselineStatus>[0],
-  compat?: Parameters<typeof computeBaselineStatus>[1],
 ) {
-  return computeBaselineStatus(input, compat);
+  return computeBaselineStatus(input);
 }
 
 export { browsers, features, groups, snapshots };
