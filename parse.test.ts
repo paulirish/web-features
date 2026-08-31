@@ -1,5 +1,19 @@
 import assert from "node:assert/strict";
+import { baselineStatus } from "./index.ts";
 import { makeCompatSets, parseAuthoring } from "./parse.ts";
+
+describe("baselineStatus (root package)", function () {
+  it("computes status for a feature ID", function () {
+    const res = baselineStatus("flexbox");
+    assert.equal(res.baseline, "widely");
+    assert.equal(typeof res.baseline_low_date, "string");
+  });
+
+  it("computes status for a BCD ID", function () {
+    const res = baselineStatus("api.Response.json");
+    assert.equal(res.baseline, "widely");
+  });
+});
 
 describe("makeCompatSets", function () {
   it("from explicit compat sets", function () {

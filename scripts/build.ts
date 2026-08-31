@@ -38,12 +38,15 @@ function buildPackage() {
     "schemas/data.schema.json",
   ];
 
-  if (!valid(data)) {
+  const { browsers, features, groups, snapshots } = data;
+  const packageData = { browsers, features, groups, snapshots };
+
+  if (!valid(packageData)) {
     logger.error("Data failed schema validation. No package built.");
     process.exit(1);
   }
 
-  const json = stringify(data);
+  const json = stringify(packageData);
   const dataPath = new URL("data.json", packageDir);
   fs.writeFileSync(dataPath, json);
 
@@ -76,7 +79,9 @@ function buildPackage() {
 }
 
 function valid(data: any): boolean {
-  const valid = validate(data);
+  const { browsers, features, groups, snapshots } = data;
+  const packageData = { browsers, features, groups, snapshots };
+  const valid = validate(packageData);
   if (!valid) {
     // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
     // const errors = validate.errors;

@@ -5,9 +5,105 @@ import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
 import { browser } from "../browser-compat-data/index.js";
-import { computeBaseline, getStatus, keystoneDateToStatus } from "./index.js";
+import {
+  baselineStatus,
+  computeBaseline,
+  getStatus,
+  keystoneDateToStatus,
+  setDefaultFeatures,
+} from "./index.js";
 
 chai.use(chaiJestSnapshot);
+
+describe("baselineStatus", function () {
+  const mockFeatures = {
+    flexbox: {
+      kind: "feature",
+      compat_features: ["css.properties.display.flex"],
+    },
+    moved_flex: {
+      kind: "moved",
+      redirect_target: "flexbox",
+    },
+    split_flex: {
+      kind: "split",
+      redirect_targets: ["flexbox"],
+    },
+  };
+
+  before(function () {
+    setDefaultFeatures(mockFeatures);
+  });
+
+  it("computes status for a single BCD ID string", function () {
+    const result = baselineStatus("api.Response.json");
+    assert.equal(result.baseline, "widely");
+    assert.equal(typeof result.baseline_low_date, "string");
+    assert.equal(typeof result.support.chrome, "string");
+    assert.equal(result.discouraged, false);
+  });
+
+  it("computes status for a feature ID string from registered features", function () {
+    const result = baselineStatus("flexbox");
+    assert.equal(result.baseline, "widely");
+    assert.equal(result.baseline_low_date, "2015-09-30");
+  });
+
+  it("resolves moved and split feature redirects", function () {
+    const movedResult = baselineStatus("moved_flex");
+    const splitResult = baselineStatus("split_flex");
+    assert.equal(movedResult.baseline, "widely");
+    assert.equal(splitResult.baseline, "widely");
+  });
+
+  it("accepts an array of inputs", function () {
+    const result = baselineStatus([
+      "css.properties.border-color",
+      "api.Response.json",
+    ]);
+    assert.equal(result.baseline, "widely");
+  });
+
+  it("accepts options object with bcdId / compatKey", function () {
+    const res1 = baselineStatus({ bcdId: "api.Response.json" });
+    const res2 = baselineStatus({ compatKey: "api.Response.json" });
+
+    assert.equal(res1.baseline, "widely");
+    assert.equal(res2.baseline, "widely");
+  });
+
+  it("accepts options object with feature", function () {
+    const res1 = baselineStatus({ feature: "flexbox" });
+    assert.equal(res1.baseline, "widely");
+  });
+
+  it("accepts custom featuresData in options object", function () {
+    const result = baselineStatus({
+      feature: "custom_item",
+      featuresData: {
+        custom_item: {
+          kind: "feature",
+          compat_features: ["css.properties.border-color"],
+        },
+      },
+    });
+    assert.equal(result.baseline, "widely");
+  });
+
+  it("throws for unknown feature ID or BCD ID", function () {
+    assert.throws(
+      () => baselineStatus("invalid_feature_or_bcd_key_xyz"),
+      /Unknown feature ID or BCD ID: "invalid_feature_or_bcd_key_xyz"/,
+    );
+  });
+
+  it("throws for invalid input types", function () {
+    assert.throws(
+      () => baselineStatus(123 as any),
+      /Invalid input provided to baselineStatus/,
+    );
+  });
+});
 
 describe("getStatus", function () {
   before(function () {

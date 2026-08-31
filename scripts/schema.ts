@@ -23,7 +23,8 @@ function checkGeneratedFileConsistency(): void {
 }
 
 function valid() {
-    const valid = validate(data);
+    const { browsers, features, groups, snapshots } = data;
+    const valid = validate({ browsers, features, groups, snapshots });
     if (!valid) {
         // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
         // const errors = validate.errors;
